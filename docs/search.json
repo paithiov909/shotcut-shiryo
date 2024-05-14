@@ -1,0 +1,132 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Shotcut 資料",
+    "section": "",
+    "text": "はじめに",
+    "crumbs": [
+      "はじめに"
+    ]
+  },
+  {
+    "objectID": "index.html#この資料について",
+    "href": "index.html#この資料について",
+    "title": "Shotcut 資料",
+    "section": "この資料について",
+    "text": "この資料について\nこの資料は、Shotcutの基本的な使い方を紹介するものです。",
+    "crumbs": [
+      "はじめに"
+    ]
+  },
+  {
+    "objectID": "index.html#shotcutとは",
+    "href": "index.html#shotcutとは",
+    "title": "Shotcut 資料",
+    "section": "Shotcutとは",
+    "text": "Shotcutとは",
+    "crumbs": [
+      "はじめに"
+    ]
+  },
+  {
+    "objectID": "index.html#why-shotcut",
+    "href": "index.html#why-shotcut",
+    "title": "Shotcut 資料",
+    "section": "Why Shotcut?",
+    "text": "Why Shotcut?",
+    "crumbs": [
+      "はじめに"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  基本操作",
+    "section": "",
+    "text": "1.1 レイアウトの選択\nShotcutを起動すると、次のような画面になります。\nこの画面の構成は、編集レイアウトと呼ばれるものです。Shotcutにはいくつかの画面の構成（レイアウト）があり、やりたい操作をおこなううえで便利なレイアウトに切り替えながら利用することができます。\n一方で、多くの利用ケースでは、編集レイアウトを使っておくだけでも十分です。実際、以降の説明でも、基本的にこの編集レイアウトだけを使いながら操作を説明しています。\nShotcutの操作に慣れてきたら、ほかのレイアウトを試してみてもいいかもしれません。",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>基本操作</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#レイアウトの選択",
+    "href": "intro.html#レイアウトの選択",
+    "title": "1  基本操作",
+    "section": "",
+    "text": "Shotcutの起動時の画面\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nレイアウトを変更するには、画面右上から「ログ」「編集」「FX」「色」「音声」「プレイヤー」のいずれかを選びます。",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>基本操作</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#プロジェクトを保存する",
+    "href": "intro.html#プロジェクトを保存する",
+    "title": "1  基本操作",
+    "section": "1.2 プロジェクトを保存する",
+    "text": "1.2 プロジェクトを保存する\nShotcutのような動画編集ソフトでは、まずはじめに、画像ファイルや動画ファイル、音声ファイルといった素材ファイルを取り込み、それら一つ一つの素材について、\n\nどのタイミングで表示・再生させるか\nどのように表示・再生させるか\n\nを決めていくことによって、一本の動画を仕上げていきます。\nこのような「素材ファイルと、それらをどのタイミングで・どのように表示・再生させるかという情報の組み合わせ」のことをプロジェクトと呼びます。\nShotcutでは、そうしたプロジェクトの情報を.mltという拡張子のファイルとして保存します。\n\n\n\n\n\n\nNote\n\n\n\n.mltファイルに保存された情報をもとにして、実際に動画ファイルを保存するには、「書き出し」という別の操作が必要です。\n\n\n新しく動画（プロジェクト）をつくりはじめるには、Shotcutを起動したときに表示されている「新規プロジェクト」というパネルから、「プロジェクト名」（作成したい.mltファイルの名前）を入力して、「開始」をクリックします。あるいは、画面の上部に表示されている「保存」というアイコンから、.mltファイルを保存することもできます。\n\n\n\n\n\n\nTip\n\n\n\n「設定 &gt; プロジェクト &gt; 映像モード」というメニューから、プロジェクトの映像モードを選択できます。映像モードは、プロジェクトの解像度とfpsの組み合わせです。\nfpsというのは1秒間あたりに表示される「コマ数」のことで、たとえば、fpsが25であれば、毎秒25個のフレームを表示することになります。",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>基本操作</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#プレイリストに素材を取り込む",
+    "href": "intro.html#プレイリストに素材を取り込む",
+    "title": "1  基本操作",
+    "section": "1.3 プレイリストに素材を取り込む",
+    "text": "1.3 プレイリストに素材を取り込む\n素材ファイルをプロジェクトに取り込むには、画面左上の「プレイリスト」という領域に、追加したい素材ファイルをドラッグアンドドロップします。\nあるいは、画面の上部の「ファイルを開く」というアイコンから追加したいファイルを選択すると、プレイヤーに素材のプレビューが表示されるので、プレビューをプレイリストにドラッグアンドドロップすることによっても、素材をプレイリストに取り込むことができます。",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>基本操作</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#タイムラインに素材を並べる",
+    "href": "intro.html#タイムラインに素材を並べる",
+    "title": "1  基本操作",
+    "section": "1.4 タイムラインに素材を並べる",
+    "text": "1.4 タイムラインに素材を並べる\n\n1.4.1 トラックとクリップの追加と削除、選択\nプレイリストは、素材ファイルがパソコンのなかのどこにあるかという情報を.mltファイルに保存して管理するための機能です。\n取り込んだ素材を動画のなかで実際に表示・再生させるには、表示・再生させたい素材をプレイリストから選んで、画面の下部の領域に配置していきます。なお、この領域のことは「タイムライン」といいます。\n実際にプレイリストに素材を取り込んでから、タイムラインに配置するまでの一連の流れを確認してみましょう。\n\nここに動画\n\nここでは、\n\nトラック\nクリップ\n\n\n\n\n\n\n\nTip\n\n\n\nタイムライン上にマウスカーソルがある状態でShiftキーを押しながらマウスホイールを回すことで、トラックの縦の表示幅を調整することができます。\nまた、同様にしてCtrlキーを押しながらマウスホイールを回すことで、タイムラインの縮尺を変えることができます。タイムラインの縮尺は、タイムラインの上部にある虫眼鏡のアイコンから調整することもできます。\n\n\n\n\n1.4.2 再生ヘッド、再生ヘッドで分割\n\n\n1.4.3 切り取り・リップル削除\n\n\n1.4.4 抜き取り\n\n\n1.4.5 コピー\n\n\n1.4.6 貼り付け\n\n\n1.4.7 位置の調整、クロスフェード",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>基本操作</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#動画として書き出しする",
+    "href": "intro.html#動画として書き出しする",
+    "title": "1  基本操作",
+    "section": "1.5 動画として書き出しする",
+    "text": "1.5 動画として書き出しする",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>基本操作</span>"
+    ]
+  },
+  {
+    "objectID": "todo.html",
+    "href": "todo.html",
+    "title": "2  動画編集する前に",
+    "section": "",
+    "text": "2.1 動画編集でやること",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>動画編集する前に</span>"
+    ]
+  },
+  {
+    "objectID": "todo.html#動画編集でやること",
+    "href": "todo.html#動画編集でやること",
+    "title": "2  動画編集する前に",
+    "section": "",
+    "text": "カットをつなぎあわせながら所定の秒数以上に編集する\nカット＝「この人が（みんなが）こういう動作をしています」のように内容を説明できる映像の単位、動作のバリエーション（と、その映し方のバリエーション）\nふつう、Shotcut上のクリップに対応する\n15～20秒程度のカットをつなぎあわせて一本の動画にする\n90秒の動画をつくるのに4～6カット必要、140秒程度まででは7カット以上はほしい",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>動画編集する前に</span>"
+    ]
+  },
+  {
+    "objectID": "todo.html#撮影のコツ",
+    "href": "todo.html#撮影のコツ",
+    "title": "2  動画編集する前に",
+    "section": "2.2 撮影のコツ",
+    "text": "2.2 撮影のコツ",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>動画編集する前に</span>"
+    ]
+  }
+]

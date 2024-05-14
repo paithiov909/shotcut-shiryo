@@ -1,0 +1,9 @@
+# はじめに {.unnumbered}
+
+## この資料について
+
+この資料は、Shotcutの基本的な使い方を紹介するものです。
+
+## Shotcutとは
+
+## Why Shotcut?

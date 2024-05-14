@@ -1,0 +1,9 @@
+/.quarto/
+.vscode
+.Rproj.user
+.Rhistory
+*_cache
+*_files
+*.docx
+!docs/**/*
+!*.qmd
