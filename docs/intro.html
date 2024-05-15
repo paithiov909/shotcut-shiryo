@@ -33,6 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <link href="./todo.html" rel="next">
 <link href="./index.html" rel="prev">
+<link href="./favicon.ico" rel="icon">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -192,6 +193,19 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>この画面の構成は、編集レイアウトと呼ばれるものです。Shotcutにはいくつかの画面の構成（レイアウト）があり、やりたい操作をおこなううえで便利なレイアウトに切り替えながら利用することができます。</p>
 <p>一方で、多くの利用ケースでは、編集レイアウトを使っておくだけでも十分です。実際、以降の説明でも、基本的にこの編集レイアウトだけを使いながら操作を説明しています。</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>ここでは、Shotcutの「表示」メニューから「使用履歴」「操作履歴」の表示をオフに、「書き出し」「ジョブ」の表示をオンにした状態の編集レイアウトを表示しています。</p>
+</div>
+</div>
 <p>Shotcutの操作に慣れてきたら、ほかのレイアウトを試してみてもいいかもしれません。</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -249,7 +263,7 @@ Tip
 <section id="プレイリストに素材を取り込む" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="プレイリストに素材を取り込む"><span class="header-section-number">1.3</span> プレイリストに素材を取り込む</h2>
 <p>素材ファイルをプロジェクトに取り込むには、画面左上の「プレイリスト」という領域に、追加したい素材ファイルをドラッグアンドドロップします。</p>
-<p>あるいは、画面の上部の「ファイルを開く」というアイコンから追加したいファイルを選択すると、プレイヤーに素材のプレビューが表示されるので、プレビューをプレイリストにドラッグアンドドロップすることによっても、素材をプレイリストに取り込むことができます。</p>
+<p>あるいは、画面の上部の「ファイルを開く」というアイコンから追加したいファイルを選択すると、素材のプレビューが表示されるので、プレビューをプレイリストにドラッグアンドドロップすることによっても、素材をプレイリストに取り込むことができます。</p>
 </section>
 <section id="タイムラインに素材を並べる" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="タイムラインに素材を並べる"><span class="header-section-number">1.4</span> タイムラインに素材を並べる</h2>
@@ -258,14 +272,59 @@ Tip
 <p>プレイリストは、素材ファイルがパソコンのなかのどこにあるかという情報を<code>.mlt</code>ファイルに保存して管理するための機能です。</p>
 <p>取り込んだ素材を動画のなかで実際に表示・再生させるには、表示・再生させたい素材をプレイリストから選んで、画面の下部の領域に配置していきます。なお、この領域のことは「タイムライン」といいます。</p>
 <p>実際にプレイリストに素材を取り込んでから、タイムラインに配置するまでの一連の流れを確認してみましょう。</p>
-<blockquote class="blockquote">
-<p>ここに動画</p>
-</blockquote>
-<p>ここでは、</p>
-<ul>
-<li>トラック</li>
-<li>クリップ</li>
-</ul>
+<div class="youtube">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+タイムラインに素材を配置する
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="youtube-frame" style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;"><iframe width="100%" height="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/J2qicZS9Wmw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
+</div>
+</div>
+</div>
+<p>ここでは、素材ファイルをプレイリストに取り込んでから、タイムラインに配置して、試しにプレビューしています。このとき、素材をタイムラインに配置していくために、動画として実際に表示・再生される「画面」を用意しています。こうした画面のことを「トラック」といいます。また、実際にトラックに配置された一つ一つの素材のことを「クリップ」と呼びます。</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>トラックには、動画ファイルや画像ファイルなどを配置して表示・再生させることができる「映像トラック」と、音声ファイルなどを配置して音声としてのみ再生させることができる「音声トラック」の2種類があります。</p>
+</div>
+</div>
+<p>トラックは、動画をつくるのに必要な数だけ作成することができます。試しに、いま見たプロジェクトに新たに映像トラックを追加して、別のクリップを重ねて表示してみましょう。</p>
+<div class="youtube">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+クリップを重ねて表示する
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="youtube-frame" style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;"><iframe width="100%" height="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/MufLPIOxIxY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
+</div>
+</div>
+</div>
+<p>ここでは、画像ファイルを新たに素材としてプレイリストに取り込んでいます。それから、先ほどつくった「トラック1」の上に、新たに「トラック2」を追加し、取り込んだ素材を「トラック2」にクリップとして配置しています。</p>
+<p>動画（プロジェクト）は、このように画面（トラック）の重なりとして表現されます。タイムライン上で重なっているクリップは、それぞれ別々のトラックに配置したものであっても、同じタイミングで表示・再生されます。なお、クリップが何も配置されていない空のトラックを表示・再生すると、通常は黒い画面が無音で表示・再生されます。</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

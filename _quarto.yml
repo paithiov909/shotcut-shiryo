@@ -7,6 +7,7 @@ book:
   title: "Shotcut 資料"
   description: |
     Shotcutの基本的な使い方を紹介します
+  favicon: favicon.ico
   chapters:
     - index.qmd
     - intro.qmd
