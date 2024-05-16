@@ -14,6 +14,14 @@
   background-image: url("https://rawcdn.githack.com/mltframework/shotcut/947d47030911293cca98d6af3554b131d3412c7a/icons/light/32x32/document-save.png");
 }
 
+.lift {
+  background-image: url("https://rawcdn.githack.com/mltframework/shotcut/947d47030911293cca98d6af3554b131d3412c7a/icons/light/32x32/lift.png");
+}
+
+.list-remove {
+  background-image: url("https://rawcdn.githack.com/mltframework/shotcut/947d47030911293cca98d6af3554b131d3412c7a/icons/light/32x32/list-remove.png");
+}
+
 .slice {
   background-image: url("https://rawcdn.githack.com/mltframework/shotcut/947d47030911293cca98d6af3554b131d3412c7a/icons/light/32x32/slice.png");
 }
