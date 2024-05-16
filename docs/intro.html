@@ -73,6 +73,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body class="nav-sidebar floating">
@@ -243,7 +244,7 @@ Note
 <p><code>.mlt</code>ファイルに保存された情報をもとにして、実際に動画ファイルを保存するには、「書き出し」という別の操作が必要です。</p>
 </div>
 </div>
-<p>新しく動画（プロジェクト）をつくりはじめるには、Shotcutを起動したときに表示されている「新規プロジェクト」というパネルから、「プロジェクト名」（作成したい<code>.mlt</code>ファイルの名前）を入力して、「開始」をクリックします。あるいは、画面の上部に表示されている「保存」というアイコンから、<code>.mlt</code>ファイルを保存することもできます。</p>
+<p>新しく動画（プロジェクト）をつくりはじめるには、Shotcutを起動したときに表示されている「新規プロジェクト」というパネルから、「プロジェクト名」（作成したい<code>.mlt</code>ファイルの名前）を入力して、「開始」をクリックします。あるいは、画面の上部に表示されている「<span class="shotcut-icon document-save"></span>（保存）」というアイコンから、<code>.mlt</code>ファイルを保存することもできます。</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -262,7 +263,7 @@ Tip
 <section id="プレイリストに素材を取り込む" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="プレイリストに素材を取り込む"><span class="header-section-number">1.3</span> プレイリストに素材を取り込む</h2>
 <p>素材ファイルをプロジェクトに取り込むには、画面左上の「プレイリスト」という領域に、追加したい素材ファイルをドラッグアンドドロップします。</p>
-<p>あるいは、画面の上部の「ファイルを開く」というアイコンから追加したいファイルを選択すると、素材のプレビューが表示されるので、プレビューをプレイリストにドラッグアンドドロップすることによっても、素材をプレイリストに取り込むことができます。</p>
+<p>あるいは、画面の上部の「<span class="shotcut-icon document-open"></span>（ファイルを開く）」というアイコンから追加したいファイルを選択すると、素材のプレビューが表示されるので、プレビューをプレイリストにドラッグアンドドロップすることによっても、素材をプレイリストに取り込むことができます。</p>
 </section>
 <section id="タイムラインに素材を並べる" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="タイムラインに素材を並べる"><span class="header-section-number">1.4</span> タイムラインに素材を並べる</h2>
@@ -290,7 +291,7 @@ Tip
 </div>
 </div>
 <p>ここでは、素材ファイルをプレイリストに取り込んでから、タイムラインに配置して、試しにプレビューしています。このとき、素材をタイムラインに配置していくために、動画として実際に表示・再生される「画面」を用意しています。こうした画面のことを「トラック」といいます。</p>
-<p>また、実際にトラックに配置された一つ一つの素材のことを「クリップ」と呼びます。クリップはドラッグすることで、表示・再生されるタイミングを調整したり、配置するトラックを変えたりすることができます。</p>
+<p>また、トラックに配置された一つ一つの素材のことを「クリップ」と呼びます。クリップはドラッグすることで、表示・再生されるタイミングを調整したり、配置するトラックを変えたりすることができます。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -336,16 +337,76 @@ Tip
 </div>
 <div class="callout-body-container callout-body">
 <p>タイムライン上にマウスカーソルがある状態でShiftキーを押しながらマウスホイールを回すことで、トラックの縦の表示幅を調整することができます。</p>
-<p>また、同様にしてCtrlキーを押しながらマウスホイールを回すことで、タイムラインの縮尺を変えることができます。タイムラインの縮尺は、タイムラインの上部にある虫眼鏡のアイコンから調整することもできます。</p>
+<p>また、同様にしてCtrlキーを押しながらマウスホイールを回すことで、タイムラインの縮尺を変えることができます。タイムラインの縮尺は、タイムラインの上部にある「<span class="shotcut-icon zoom-out"></span>」と「<span class="shotcut-icon zoom-in"></span>」というアイコンから調整することもできます。</p>
 </div>
 </div>
 </section>
 <section id="再生ヘッドで分割" class="level3" data-number="1.4.2">
 <h3 data-number="1.4.2" class="anchored" data-anchor-id="再生ヘッドで分割"><span class="header-section-number">1.4.2</span> 再生ヘッドで分割</h3>
-<ul>
-<li>Ctrl+Zでもどる、Ctrl+Yでやり直す</li>
-<li>Cursor, Alt+Cursorで再生ヘッドを移動</li>
-</ul>
+<p>クリップをクリックすると、そのクリップが選択された状態になります。また、タイムラインの左端をクリックすると、トラックやタイムライン全体を選択することができます。</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/shotcut-selection-1-resized.gif" class="img-fluid figure-img"></p>
+<figcaption>クリップを選択</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/shotcut-selection-2-resized.gif" class="img-fluid figure-img"></p>
+<figcaption>トラックを選択</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/shotcut-selection-3-resized.gif" class="img-fluid figure-img"></p>
+<figcaption>タイムライン全体を選択</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>クリップやトラックが選択されている状態では、選択されているクリップやトラックが赤い枠線で囲まれていることがわかります。こうした選択状態を解除するには、タイムラインを右クリックすると表示されるコンテキストメニューから「選択 &gt; 選択解除」をクリックします。</p>
+<p>選択状態とは別に、そのとき操作しているトラックについては、トラック全体が抹茶色になって表示されます。これは、そのトラックにフォーカスが当たっていることを表します。</p>
+<p>また、タイムライン上にある白い縦線は、動画（プロジェクト）をプレビューしたとき、その位置から再生されることを表す目印です。この縦線のことを「再生ヘッド」（または「プレイヘッド」）と呼びます。再生ヘッドの位置を変えるには、トラックの上にある、動画の再生時間が表示されている領域の適当な位置をクリックします。</p>
+<p>タイムラインの上部にある「<span class="shotcut-icon slice"></span>」というアイコンをクリックすると、再生ヘッドの位置でクリップを2つに分割することができます。通常は、そのときフォーカスが当たっているトラックにあるクリップが分割されます。</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>このあたりの挙動はやや複雑なので、クリップを分割するときには、分割したいクリップがあるトラックにフォーカスが当たっていることを確認するようにしましょう。</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>タイムラインの操作には、キーボードショートカットを使うと便利です。</p>
+<p>たとえば、キーボードのAltキーとカーソルキー（<code>←</code>または<code>→</code>）を同時に押すことで、再生ヘッドをそこからもっとも近いクリップの端に移動させることができます。</p>
+<p>また、クリップの分割などのタイムライン上での操作については、「元に戻す」や「やり直す」を適用することができます。「元に戻す」にはCtrlキーと<code>z</code>キーを同時押し、「やり直す」にはCtrlキーと<code>y</code>キーを同時押しします。</p>
+</div>
+</div>
 </section>
 <section id="抜き取りリップル削除" class="level3" data-number="1.4.3">
 <h3 data-number="1.4.3" class="anchored" data-anchor-id="抜き取りリップル削除"><span class="header-section-number">1.4.3</span> 抜き取り・リップル削除</h3>

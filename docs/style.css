@@ -1,0 +1,27 @@
+.shotcut-icon {
+  width: 1.2em;
+  height: 1.2em;
+  margin-bottom: -0.2em;
+  display: inline-block;
+  background: no-repeat center/90%;
+}
+
+.document-open {
+  background-image: url("https://rawcdn.githack.com/mltframework/shotcut/947d47030911293cca98d6af3554b131d3412c7a/icons/light/32x32/document-open.png");
+}
+
+.document-save {
+  background-image: url("https://rawcdn.githack.com/mltframework/shotcut/947d47030911293cca98d6af3554b131d3412c7a/icons/light/32x32/document-save.png");
+}
+
+.slice {
+  background-image: url("https://rawcdn.githack.com/mltframework/shotcut/947d47030911293cca98d6af3554b131d3412c7a/icons/light/32x32/slice.png");
+}
+
+.zoom-in {
+  background-image: url("https://rawcdn.githack.com/mltframework/shotcut/947d47030911293cca98d6af3554b131d3412c7a/icons/light/32x32/zoom-in.png");
+}
+
+.zoom-out {
+  background-image: url("https://rawcdn.githack.com/mltframework/shotcut/947d47030911293cca98d6af3554b131d3412c7a/icons/light/32x32/zoom-out.png");
+}
