@@ -130,8 +130,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./transition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">トランジション</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./filter.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">フィルタ</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">フィルタ</span></span></a>
   </div>
 </li>
     </ul>
@@ -154,7 +160,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#抜き取りリップル削除" id="toc-抜き取りリップル削除" class="nav-link" data-scroll-target="#抜き取りリップル削除"><span class="header-section-number">1.4.3</span> 抜き取り・リップル削除</a></li>
   <li><a href="#切り取りコピー" id="toc-切り取りコピー" class="nav-link" data-scroll-target="#切り取りコピー"><span class="header-section-number">1.4.4</span> 切り取り・コピー</a></li>
   <li><a href="#上書き貼り付け" id="toc-上書き貼り付け" class="nav-link" data-scroll-target="#上書き貼り付け"><span class="header-section-number">1.4.5</span> 上書き・貼り付け</a></li>
-  <li><a href="#クロスフェード" id="toc-クロスフェード" class="nav-link" data-scroll-target="#クロスフェード"><span class="header-section-number">1.4.6</span> クロスフェード</a></li>
   </ul></li>
   <li><a href="#動画として書き出しする" id="toc-動画として書き出しする" class="nav-link" data-scroll-target="#動画として書き出しする"><span class="header-section-number">1.5</span> 動画として書き出しする</a></li>
   </ul>
@@ -470,33 +475,97 @@ Note
 </section>
 <section id="切り取りコピー" class="level3" data-number="1.4.4">
 <h3 data-number="1.4.4" class="anchored" data-anchor-id="切り取りコピー"><span class="header-section-number">1.4.4</span> 切り取り・コピー</h3>
-<ul>
-<li>Shotcutには、操作したクリップを一時的に保存しておくクリップボードがある</li>
-<li>クリップボードを利用するには、切り取りやコピーを使う</li>
-<li>切り取りでは、リップル削除と同様に、後続するクリップは間隔を保ったままずらされる挙動になるが、切り取ったクリップがクリップボードに保存される</li>
-</ul>
+<p>Shotcutには、操作しているクリップを一時的に保存しておける「クリップボード」機能があります。選択したクリップを取り除いてしまうのではなく、クリップボードに保存するには、抜き取り・リップル削除ではなく、切り取り・コピーを使います。</p>
+<p>クリップを「切り取り」するには、切り取りたいクリップが選択された状態で、タイムラインの上部にある「<span class="shotcut-icon edit-cut"></span>」というアイコンをクリックします。切り取りをした場合、リップル削除したときと同じように、後続するクリップは間隔を保ったまま「前にずらされる」ような挙動をします。</p>
+<p>また、クリップを「コピー」するには、コピーしたいクリップが選択された状態で、タイムラインの上部にある「<span class="shotcut-icon edit-copy"></span>」というアイコンをクリックします。</p>
 </section>
 <section id="上書き貼り付け" class="level3" data-number="1.4.5">
 <h3 data-number="1.4.5" class="anchored" data-anchor-id="上書き貼り付け"><span class="header-section-number">1.4.5</span> 上書き・貼り付け</h3>
-<ul>
-<li>切り取りやコピーによってクリップボードに保存されているクリップをトラックに差し戻すには、上書きや貼り付けを使う</li>
-<li>上書きは、クリップボードにあるクリップによって、既存のトラックを再生ヘッドがある位置から上書きする。再生ヘッドがある位置の後ろに別の要素があった場合、上書きするクリップと同じ長さだけ、その部分にあった要素が消えてしまう</li>
-<li>貼り付けは、クリップボードにあるトラックを再生ヘッドのある位置に挿入する。再生ヘッドがある位置の後ろに別の要素があった場合、挿入するクリップに後続する要素は後ろにリップルする</li>
-</ul>
-<blockquote class="blockquote">
-<p>ここに動画</p>
-<p>続き</p>
-</blockquote>
-<ul>
-<li>すべてのトラックをリップル</li>
-</ul>
-</section>
-<section id="クロスフェード" class="level3" data-number="1.4.6">
-<h3 data-number="1.4.6" class="anchored" data-anchor-id="クロスフェード"><span class="header-section-number">1.4.6</span> クロスフェード</h3>
+<p>切り取りやコピーによってクリップボードに保存されているクリップをトラックに差し戻すには、「上書き」や「貼り付け」を使います。</p>
+<p>「上書き」するには、上書きしたいトラックにフォーカスが当たっている状態で、タイムラインの上部にある「<span class="shotcut-icon overwrite"></span>」というアイコンをクリックします。</p>
+<p>実際に「上書き」をしているようすを見てみましょう。</p>
+<div class="youtube">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+クリップを上書き
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="youtube-frame" style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;"><iframe width="100%" height="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/sb507xy0pFA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
+</div>
+</div>
+</div>
+<p>「上書き」を使うと、そのときクリップボードにあるクリップによって、再生ヘッドがある位置からそのトラックが上書きされます。再生ヘッドがある位置の後ろに別の要素があった場合、上書きするクリップと同じ長さだけ、その部分にあった要素が消えてしまうような挙動になります。</p>
+<p>また、「貼り付け」をするには、貼り付けをしたいトラックにフォーカスが当たっている状態で、タイムラインの上部にある「<span class="shotcut-icon edit-paste"></span>」というアイコンをクリックします。</p>
+<p>「貼り付け」をしているようすを確認してみましょう。</p>
+<div class="youtube">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+クリップを貼り付け
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="youtube-frame" style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;"><iframe width="100%" height="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/V2ZBWM-TL28" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
+</div>
+</div>
+</div>
+<p>「貼り付け」を使うと、そのときクリップボードにあるクリップが再生ヘッドのある位置に挿入されます。再生ヘッドがある位置の後ろに別の要素があった場合、後続する要素は「後ろにずらされる」ような挙動をします。</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>リップルは、Shotcutでの操作に慣れるまでは、どんな挙動になるか予測しづらいものかもしれません。しかし、複数のトラックを使った動画（プロジェクト）を編集していると、トラック間でタイミングを同期したままトラックを操作したいシーンがよくあり、そうした場合には、リップルを活用できると非常に便利です。</p>
+<p>リップルは、タイムラインの上部にあるスイッチから切り替えることで、挙動を調整することができます。</p>
+<p>タイムラインの上部にある「<span class="shotcut-icon target"></span>（リップル）」を有効にしていると、クリップの位置や長さを調整したときにも、後続するクリップがリップルするようになります。また、「<span class="shotcut-icon ripple-all"></span>（すべてのトラックをリップル）」を有効にしていると、あるトラックでのリップルがすべてのトラックで同期するようになります。</p>
+<p>このほかに、マーカーがリップルに追従するようになる「<span class="shotcut-icon ripple-marker"></span>（マーカーをリップル）」という機能もあります。</p>
+</div>
+</div>
 </section>
 </section>
 <section id="動画として書き出しする" class="level2" data-number="1.5">
 <h2 data-number="1.5" class="anchored" data-anchor-id="動画として書き出しする"><span class="header-section-number">1.5</span> 動画として書き出しする</h2>
+<p><code>.mlt</code>ファイルを元に動画ファイルを作成するには「書き出し」をおこなう必要があります。</p>
+<p>プロジェクトを動画ファイルとして書き出すには、まず、画面の上部に表示されている「<span class="shotcut-icon media-record"></span>（書き出し）」というアイコンをクリックします。すると、画面の左上に「書き出し」というパネルが開くので、適当な「プリセット」を選択し、「ファイルの書き出し」ボタンをクリックします。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/shotcut-screenshot-record.png" class="img-fluid figure-img"></p>
+<figcaption>「書き出し」パネル</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>利用しているパソコンの性能にもよりますが、動画ファイルの書き出しには相応の時間がかかります。</p>
+<p>Shotcutは、同梱されているffmpegというソフトウェアを使って、動画ファイルの書き出しをおこないます。なお、とくに何も指定しない場合、動画の書き出しにはCPUのみが使われます。動画の書き出しにGPUなどを利用したい場合、「書き出し」パネルの「ハードウェアエンコーダを使用」というチェックボックスにチェックを入れます。利用可能なハードウェアエンコーダは、Shotcutによって自動的に検出されます。</p>
+</div>
+</div>
 
 
 </section>

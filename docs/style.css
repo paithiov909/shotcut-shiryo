@@ -14,6 +14,18 @@
   background-image: url("https://rawcdn.githack.com/mltframework/shotcut/947d47030911293cca98d6af3554b131d3412c7a/icons/light/32x32/document-save.png");
 }
 
+.edit-copy {
+  background-image: url("https://rawcdn.githack.com/mltframework/shotcut/a7d98d8e6a2d984ca049985021aed4d6d7042be9/icons/light/32x32/edit-copy.png");
+}
+
+.edit-cut {
+  background-image: url("https://rawcdn.githack.com/mltframework/shotcut/a7d98d8e6a2d984ca049985021aed4d6d7042be9/icons/light/32x32/edit-cut.png");
+}
+
+.edit-paste {
+  background-image: url("https://rawcdn.githack.com/mltframework/shotcut/a7d98d8e6a2d984ca049985021aed4d6d7042be9/icons/light/32x32/edit-paste.png");
+}
+
 .lift {
   background-image: url("https://rawcdn.githack.com/mltframework/shotcut/947d47030911293cca98d6af3554b131d3412c7a/icons/light/32x32/lift.png");
 }
@@ -22,8 +34,29 @@
   background-image: url("https://rawcdn.githack.com/mltframework/shotcut/947d47030911293cca98d6af3554b131d3412c7a/icons/light/32x32/list-remove.png");
 }
 
+.media-record {
+  background-image: url("https://rawcdn.githack.com/mltframework/shotcut/a7d98d8e6a2d984ca049985021aed4d6d7042be9/icons/light/32x32/media-record.png");
+}
+
+.overwrite {
+  background-image: url("https://rawcdn.githack.com/mltframework/shotcut/a7d98d8e6a2d984ca049985021aed4d6d7042be9/icons/light/32x32/overwrite.png");
+}
+
+.ripple-all {
+  background-image: url("https://rawcdn.githack.com/mltframework/shotcut/a7d98d8e6a2d984ca049985021aed4d6d7042be9/icons/light/32x32/ripple-all.png");
+}
+
+.ripple-marker {
+  background-image: url("https://rawcdn.githack.com/mltframework/shotcut/a7d98d8e6a2d984ca049985021aed4d6d7042be9/icons/light/32x32/ripple-marker.png");
+}
+
 .slice {
   background-image: url("https://rawcdn.githack.com/mltframework/shotcut/947d47030911293cca98d6af3554b131d3412c7a/icons/light/32x32/slice.png");
+}
+
+/* ripple */
+.target {
+  background-image: url("https://rawcdn.githack.com/mltframework/shotcut/a7d98d8e6a2d984ca049985021aed4d6d7042be9/icons/light/32x32/target.png");
 }
 
 .zoom-in {

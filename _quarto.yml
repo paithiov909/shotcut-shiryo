@@ -12,6 +12,7 @@ book:
     - index.qmd
     - intro.qmd
     - todo.qmd
+    - transition.qmd
     - filter.qmd
 
 format:
