@@ -6,6 +6,10 @@
   background: no-repeat center/90%;
 }
 
+.document-new {
+  background-image: url("https://rawcdn.githack.com/mltframework/shotcut/823625e4149c88eb0ac4a6a66cbe06802f294cf9/icons/light/32x32/document-new.png");
+}
+
 .document-open {
   background-image: url("https://rawcdn.githack.com/mltframework/shotcut/947d47030911293cca98d6af3554b131d3412c7a/icons/light/32x32/document-open.png");
 }

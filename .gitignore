@@ -4,6 +4,7 @@
 .Rhistory
 *_cache
 *_files
+/assets/*.mp4
 /youtube/
 *.docx
 *.mlt

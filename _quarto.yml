@@ -14,6 +14,8 @@ book:
     - todo.qmd
     - transition.qmd
     - filter.qmd
+    - keyframe.qmd
+    - color-grading.qmd
 
 format:
   html:
