@@ -202,16 +202,40 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="3.1" class="anchored" data-anchor-id="その他を開く"><span class="header-section-number">3.1</span> その他を開く</h2>
 <section id="色" class="level3" data-number="3.1.1">
 <h3 data-number="3.1.1" class="anchored" data-anchor-id="色"><span class="header-section-number">3.1.1</span> 色</h3>
-<ul>
-<li>Shotcutでは、ファイル以外の素材も扱うことができる。そうした特殊な素材を扱うには、「その他を開く」をクリックする</li>
-<li>「色」は、「その他を開く」から作成できる素材のひとつ。プロジェクトの解像度いっぱいのサイズの領域について、指定した単色で塗りつぶした素材を作成する</li>
-</ul>
+<p>Shotcutでは、一部の特殊な形式の素材を扱うことができます（音声・映像デバイスからの入力など）。そうした特殊な素材を扱うには、画面の上部「<span class="shotcut-icon document-new"></span>（その他を開く…）」というメニューから、目的の形式を選択します。</p>
+<p>「色」は、「<span class="shotcut-icon document-new"></span>（その他を開く…）」から作成できる素材の一つです。プロジェクトの解像度いっぱいのサイズの領域について、指定した単色で塗りつぶしただけの素材を作成することができます。色を指定しない場合、デフォルトでは無色透明（<code>#00000000</code>）な素材が作成されます。</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>ここでは、Shotcutの画面上での表示にならって、色コードを<code>#ff000000</code>のような形式で表示しています。先頭の2ケタはアルファチャンネル（A）で、残りはRGBの各チャンネルの値です。</p>
+<p>Shotcutにおける色を選択する画面では、RGBAの各チャンネルを<code>0-255</code>の値の範囲で指定できるようになっています。<code>0-255</code>の範囲の値は、16進数を使うと2ケタで表すことができることから、各チャンネルの値を16進数で表すことが慣習的によくおこなわれます。</p>
+</div>
+</div>
 </section>
 <section id="テキスト" class="level3" data-number="3.1.2">
 <h3 data-number="3.1.2" class="anchored" data-anchor-id="テキスト"><span class="header-section-number">3.1.2</span> テキスト</h3>
-<ul>
-<li>「テキスト」も、「その他を開く」から作成できる素材のひとつで、入力した内容が書かれたテキストボックス付きの「色」を作成する</li>
-</ul>
+<p>「テキスト」も「<span class="shotcut-icon document-new"></span>（その他を開く…）」から作成できる素材の一つです。こちらは、入力した内容が書かれたテキストボックス付きの「色」を作成することができます。</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>「テキスト」から作成される素材は、実際には、指定した「色」に「テキスト：シンプル」または「テキスト：リッチテキスト」という「フィルタ」が適用されたクリップになります。</p>
+<p>Shotcutにおける「フィルタ」機能については、後であらためて説明します。</p>
+</div>
+</div>
 </section>
 </section>
 <section id="クリップの長さを調整する" class="level2" data-number="3.2">
@@ -239,7 +263,7 @@ Note
 <p>映像作品において、カットが切り替わる際にかかる効果のことを「トランジション」と呼びます。たとえば、次の動画で使われているような効果のことです。</p>
 <div class="youtube">
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -248,7 +272,7 @@ Note
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="youtube-frame" style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;"><iframe width="100%" height="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/Zs9uTZ3Y2dc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </div>
@@ -275,9 +299,24 @@ Note
 <p>Shotcutでクリップ間にトランジションを設定するには、まずはじめに、切り替え元のクリップと切り替え先のクリップとを一つのトラックに並べて配置します。それから、片方のクリップをドラッグして、もう一方のクリップと重なるようにすると、重なった部分が「トランジション」形式の新しいクリップになります。</p>
 <p>トランジションは、それ自体が一つのクリップなので、通常のクリップと同様に、端をつかんでドラッグすることで長さを調整できます。また、トランジションを選択した状態で、「プロパティ &gt; 映像」からトランジションの方法を変更できます。</p>
 <p>試しに、トランジションを設定しているようすを見てみましょう。次の動画では「<span class="shotcut-icon document-new"></span>（その他を開く）」から、青（<code>#ff0000ff</code>）・白（<code>#fffafafa</code>）・オレンジ（<code>#ffff5500</code>）の背景の「テキスト」を作成し、この順番に一つのトラックに並べてから、トランジションを設定しています。</p>
-<blockquote class="blockquote">
-<p>ここに動画</p>
-</blockquote>
+<div class="youtube">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+トランジションをかける
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="youtube-frame" style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;"><iframe width="100%" height="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/lvmgdUV0ugo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
+</div>
+</div>
+</div>
 <p>ここでは、各色の「テキスト」をそれぞれ2秒ずつ表示させ、それとは別に1秒ずつかけてトランジションするような動画をつくっています。つまり、各色のクリップの長さと重なり方は、次の図のようになっています。</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
@@ -303,11 +342,31 @@ Note
 </section>
 <section id="フェードインとフェードアウト" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="フェードインとフェードアウト"><span class="header-section-number">3.4</span> フェードインとフェードアウト</h2>
-<p>トランジションとは別に、フェードインやフェードアウトをかけることもできます。</p>
-<ul>
-<li>フェードはクリップではない</li>
-<li>透明に・からフェードと黒に・からフェードがある</li>
-</ul>
+<p>トランジションのほかに、フェードインやフェードアウトをかけることもできます。</p>
+<p>フェードインというのは映像や音声をなめらかに表示・再生させる効果、フェードアウトはその反対になめらかに消す効果のことです。</p>
+<p>Shotcutにおけるフェードインやフェードアウトは、フェードにかかる持続時間（長さ）が設定されたフィルタです。ただ、ほかのフィルタとは違って、フェードインとフェードアウトについては、適用したいクリップの上の隅をそのクリップの内側に向かってドラッグすることによって、直観的に適用することができます。</p>
+<p>実際にフェードインやフェードアウトを適用している動画を見てみましょう。</p>
+<div class="youtube">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+フェードイン・アウト
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="youtube-frame" style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;"><iframe width="100%" height="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/Yki_GdQWLEY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
+</div>
+</div>
+</div>
+<p>この動画の例のように、映像のフェードインとフェードアウトは、フェードイン・アウトするクリップの下に別のトラックがある場合では、クリップの不透明率を変える挙動になります。つまり、そうした場合では、フェードイン・アウトを適用したクリップが透明な状態から徐々に表示されたり、逆に徐々に透明になったりします。</p>
+<p>一方で、そのクリップの下に別のトラックがない場合には、黒い画面とのあいだでフェードイン・アウトします。この挙動は、フェードイン・アウトを適用したクリップを選択した状態で「フィルタ &gt; 映像のフェードイン（または、フェードアウト） &gt; 黒でフェードの代わりに不透明率を調整」というチェックボックスにチェックを入れることで変更することができます。</p>
+<p>なお、黒以外の単色とのあいだでフェードしたい場合は、フェードイン・アウトするクリップの下のトラックに目的の「色」を配置したうえで、「黒でフェードの代わりに不透明率を調整」するようにすれば実現できます。</p>
 
 
 </section>

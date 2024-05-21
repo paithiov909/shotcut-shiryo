@@ -1,9 +1,5 @@
 # はじめに {.unnumbered}
 
+この資料は、[Shotcut](https://www.shotcut.org/)の基本的な使い方を紹介するものです。
+
 > [Video editing icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/video-editing)
-
-## Shotcutとは
-
-この資料は、Shotcutの基本的な使い方を紹介するものです。
-
-## Why Shotcut?
