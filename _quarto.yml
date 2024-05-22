@@ -13,7 +13,8 @@ book:
     - intro.qmd
     - todo.qmd
     - transition.qmd
-    - filter.qmd
+    - filter-video.qmd
+    - filter-audio.qmd
     - keyframe.qmd
     - color-grading.qmd
 

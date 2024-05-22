@@ -124,7 +124,7 @@
     "href": "transition.html#その他を開く",
     "title": "3  トランジション",
     "section": "",
-    "text": "3.1.1 色\nShotcutでは、一部の特殊な形式の素材を扱うことができます（音声・映像デバイスからの入力など）。そうした特殊な素材を扱うには、画面の上部にある「（その他を開く…）」というメニューから、目的の形式を選択します。\n「色」は、「（その他を開く…）」から作成できる素材の一つです。プロジェクトの解像度いっぱいのサイズの領域について、指定した単色で塗りつぶしただけの素材を作成することができます。色を指定しない場合、デフォルトでは無色透明（#00000000）な素材が作成されます。\n\n\n\n\n\n\nNote\n\n\n\nここでは、Shotcutの画面上での表示にならって、色コードを#ff000000のような形式で表示しています。先頭の2ケタはアルファチャンネル（A）で、残りはRGBの各チャンネルの値です。\nShotcutにおける色を選択する画面では、RGBAの各チャンネルを0-255の値の範囲で指定できるようになっています。0-255の範囲の値は、16進数を使うと2ケタで表せることから、各チャンネルの値を16進数で表すことがよくおこなわれます。\n\n\n\n\n3.1.2 テキスト\n「テキスト」も「（その他を開く…）」から作成できる素材の一つです。こちらは、入力した内容が書かれたテキストボックス付きの「色」を作成することができます。\n\n\n\n\n\n\nNote\n\n\n\n「テキスト」から作成した素材は、実際には、指定した「色」に「テキスト：シンプル」または「テキスト：リッチテキスト」という「フィルタ」が適用されたクリップになります。\nShotcutにおける「フィルタ」機能については、Shotcut 資料 - 4  フィルタであらためて説明します。",
+    "text": "3.1.1 色\nShotcutでは、一部の特殊な形式の素材を扱うことができます（音声・映像デバイスからの入力など）。そうした特殊な素材を扱うには、画面の上部にある「（その他を開く…）」というメニューから、目的の形式を選択します。\n「色」は、「（その他を開く…）」から作成できる素材の一つです。プロジェクトの解像度いっぱいのサイズの領域について、指定した単色で塗りつぶしただけの素材を作成することができます。色を指定しない場合、デフォルトでは無色透明（#00000000）な素材が作成されます。\n\n\n\n\n\n\nNote\n\n\n\nここでは、Shotcutの画面上での表示にならって、色コードを#ff000000のような形式で表示しています。先頭の2ケタはアルファチャンネル（A）で、残りはRGBの各チャンネルの値です。\nShotcutにおける色を選択する画面では、RGBAの各チャンネルを0-255の値の範囲で指定できるようになっています。0-255の範囲の値は16進数を使うと2ケタで表せることから、各チャンネルの値を16進数で表すことがよくおこなわれます。\n\n\n\n\n3.1.2 テキスト\n「テキスト」も「（その他を開く…）」から作成できる素材の一つです。こちらは、入力した内容が書かれたテキストボックス付きの「色」を作成することができます。\n\n\n\n\n\n\nNote\n\n\n\n「テキスト」から作成した素材は、実際には、指定した「色」に「テキスト：シンプル」または「テキスト：リッチテキスト」という「フィルタ」が適用されたクリップになります。\nShotcutにおける「フィルタ」機能については、Shotcut 資料 - 4  フィルタであらためて説明します。",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>トランジション</span>"
     ]
@@ -160,73 +160,53 @@
     ]
   },
   {
-    "objectID": "filter.html",
-    "href": "filter.html",
-    "title": "4  フィルタ",
+    "objectID": "filter-video.html",
+    "href": "filter-video.html",
+    "title": "4  フィルタ（映像）",
     "section": "",
     "text": "4.1 サイズ位置回転",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>フィルタ</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>フィルタ（映像）</span>"
     ]
   },
   {
-    "objectID": "filter.html#切り抜き",
-    "href": "filter.html#切り抜き",
-    "title": "4  フィルタ",
+    "objectID": "filter-video.html#切り抜き",
+    "href": "filter-video.html#切り抜き",
+    "title": "4  フィルタ（映像）",
     "section": "4.2 切り抜き",
     "text": "4.2 切り抜き",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>フィルタ</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>フィルタ（映像）</span>"
     ]
   },
   {
-    "objectID": "filter.html#合成モード",
-    "href": "filter.html#合成モード",
-    "title": "4  フィルタ",
+    "objectID": "filter-video.html#合成モード",
+    "href": "filter-video.html#合成モード",
+    "title": "4  フィルタ（映像）",
     "section": "4.3 合成モード",
-    "text": "4.3 合成モード",
+    "text": "4.3 合成モード\nAdobe Photoshopなどの画像編集ソフトにおける、いわゆるブレンドモードに相当します。\n\nPhotoshopの使い方！描画モードを理解する | 姫野家クリエイティブノート\nディザ合成は「ディザ」というフィルタ",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>フィルタ</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>フィルタ（映像）</span>"
     ]
   },
   {
-    "objectID": "filter.html#アルファチャンネル",
-    "href": "filter.html#アルファチャンネル",
-    "title": "4  フィルタ",
-    "section": "4.4 アルファチャンネル",
-    "text": "4.4 アルファチャンネル",
+    "objectID": "filter-video.html#クロマキー合成",
+    "href": "filter-video.html#クロマキー合成",
+    "title": "4  フィルタ（映像）",
+    "section": "4.4 クロマキー合成",
+    "text": "4.4 クロマキー合成",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>フィルタ</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>フィルタ（映像）</span>"
     ]
   },
   {
-    "objectID": "filter.html#クロマキー合成",
-    "href": "filter.html#クロマキー合成",
-    "title": "4  フィルタ",
-    "section": "4.5 クロマキー合成",
-    "text": "4.5 クロマキー合成",
+    "objectID": "filter-audio.html",
+    "href": "filter-audio.html",
+    "title": "5  フィルタ（音声）",
+    "section": "",
+    "text": "5.0.1 音量を調整する\n\nゲイン音量\nリミッター\nコンプレッサー\n\nコンプレッサー～Audacityエフェクト解説\n\n\n5.0.2 特定の周波数帯の音量を下げる\n\nローパス・ハイパス・バンドパス\nノッチ（刻み目）\nイコライザー（Equalizer）",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>フィルタ</span>"
-    ]
-  },
-  {
-    "objectID": "filter.html#マスク",
-    "href": "filter.html#マスク",
-    "title": "4  フィルタ",
-    "section": "4.6 マスク",
-    "text": "4.6 マスク",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>フィルタ</span>"
-    ]
-  },
-  {
-    "objectID": "filter.html#ゲイン音量",
-    "href": "filter.html#ゲイン音量",
-    "title": "4  フィルタ",
-    "section": "4.7 ゲイン音量",
-    "text": "4.7 ゲイン音量",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>フィルタ</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>フィルタ（音声）</span>"
     ]
   }
 ]

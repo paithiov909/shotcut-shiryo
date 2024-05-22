@@ -8,7 +8,7 @@
 
 <meta name="description" content="Shotcutの基本的な使い方を紹介します">
 
-<title>Shotcut 資料 - 3&nbsp; トランジション</title>
+<title>Shotcut 資料 - 5&nbsp; フィルタ（音声）</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./filter-video.html" rel="next">
-<link href="./todo.html" rel="prev">
+<link href="./keyframe.html" rel="next">
+<link href="./filter-video.html" rel="prev">
 <link href="./favicon.ico" rel="icon">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -71,9 +71,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="style.css">
@@ -88,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./transition.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">トランジション</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./filter-audio.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">フィルタ（音声）</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -133,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./transition.html" class="sidebar-item-text sidebar-link active">
+  <a href="./transition.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">トランジション</span></span></a>
   </div>
 </li>
@@ -145,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./filter-audio.html" class="sidebar-item-text sidebar-link">
+  <a href="./filter-audio.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">フィルタ（音声）</span></span></a>
   </div>
 </li>
@@ -171,14 +168,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#その他を開く" id="toc-その他を開く" class="nav-link active" data-scroll-target="#その他を開く"><span class="header-section-number">3.1</span> その他を開く</a>
-  <ul class="collapse">
-  <li><a href="#色" id="toc-色" class="nav-link" data-scroll-target="#色"><span class="header-section-number">3.1.1</span> 色</a></li>
-  <li><a href="#テキスト" id="toc-テキスト" class="nav-link" data-scroll-target="#テキスト"><span class="header-section-number">3.1.2</span> テキスト</a></li>
-  </ul></li>
-  <li><a href="#クリップの長さを調整する" id="toc-クリップの長さを調整する" class="nav-link" data-scroll-target="#クリップの長さを調整する"><span class="header-section-number">3.2</span> クリップの長さを調整する</a></li>
-  <li><a href="#トランジションをかける" id="toc-トランジションをかける" class="nav-link" data-scroll-target="#トランジションをかける"><span class="header-section-number">3.3</span> トランジションをかける</a></li>
-  <li><a href="#フェードインとフェードアウト" id="toc-フェードインとフェードアウト" class="nav-link" data-scroll-target="#フェードインとフェードアウト"><span class="header-section-number">3.4</span> フェードインとフェードアウト</a></li>
+  <li><a href="#音量を調整する" id="toc-音量を調整する" class="nav-link active" data-scroll-target="#音量を調整する"><span class="header-section-number">5.0.1</span> 音量を調整する</a></li>
+  <li><a href="#特定の周波数帯の音量を下げる" id="toc-特定の周波数帯の音量を下げる" class="nav-link" data-scroll-target="#特定の周波数帯の音量を下げる"><span class="header-section-number">5.0.2</span> 特定の周波数帯の音量を下げる</a></li>
   </ul>
 </nav>
     </div>
@@ -187,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">トランジション</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">フィルタ（音声）</span></h1>
 </div>
 
 
@@ -204,175 +195,22 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="その他を開く" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="その他を開く"><span class="header-section-number">3.1</span> その他を開く</h2>
-<section id="色" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1" class="anchored" data-anchor-id="色"><span class="header-section-number">3.1.1</span> 色</h3>
-<p>Shotcutでは、一部の特殊な形式の素材を扱うことができます（音声・映像デバイスからの入力など）。そうした特殊な素材を扱うには、画面の上部にある「<span class="shotcut-icon document-new"></span>（その他を開く…）」というメニューから、目的の形式を選択します。</p>
-<p>「色」は、「<span class="shotcut-icon document-new"></span>（その他を開く…）」から作成できる素材の一つです。プロジェクトの解像度いっぱいのサイズの領域について、指定した単色で塗りつぶしただけの素材を作成することができます。色を指定しない場合、デフォルトでは無色透明（<code>#00000000</code>）な素材が作成されます。</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>ここでは、Shotcutの画面上での表示にならって、色コードを<code>#ff000000</code>のような形式で表示しています。先頭の2ケタはアルファチャンネル（A）で、残りはRGBの各チャンネルの値です。</p>
-<p>Shotcutにおける色を選択する画面では、RGBAの各チャンネルを<code>0-255</code>の値の範囲で指定できるようになっています。<code>0-255</code>の範囲の値は16進数を使うと2ケタで表せることから、各チャンネルの値を16進数で表すことがよくおこなわれます。</p>
-</div>
-</div>
+<section id="音量を調整する" class="level3" data-number="5.0.1">
+<h3 data-number="5.0.1" class="anchored" data-anchor-id="音量を調整する"><span class="header-section-number">5.0.1</span> 音量を調整する</h3>
+<ul>
+<li>ゲイン音量</li>
+<li>リミッター</li>
+<li>コンプレッサー</li>
+</ul>
+<p><a href="https://taira-komori.jpn.org/06compressor.html">コンプレッサー～Audacityエフェクト解説</a></p>
 </section>
-<section id="テキスト" class="level3" data-number="3.1.2">
-<h3 data-number="3.1.2" class="anchored" data-anchor-id="テキスト"><span class="header-section-number">3.1.2</span> テキスト</h3>
-<p>「テキスト」も「<span class="shotcut-icon document-new"></span>（その他を開く…）」から作成できる素材の一つです。こちらは、入力した内容が書かれたテキストボックス付きの「色」を作成することができます。</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>「テキスト」から作成した素材は、実際には、指定した「色」に「テキスト：シンプル」または「テキスト：リッチテキスト」という「フィルタ」が適用されたクリップになります。</p>
-<p>Shotcutにおける「フィルタ」機能については、<a href="filter.html">Shotcut 資料 - 4&nbsp; フィルタ</a>であらためて説明します。</p>
-</div>
-</div>
-</section>
-</section>
-<section id="クリップの長さを調整する" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="クリップの長さを調整する"><span class="header-section-number">3.2</span> クリップの長さを調整する</h2>
-<p>クリップの端にマウスカーソルをもっていくと、マウスカーソルのかたちが「↔︎」のようなかたちに変化します。その状態でクリップの端をつかんでドラッグすると、クリップを左右に伸縮させて、長さを調整することができます。</p>
-<p>ただし、動画ファイルや音声ファイル、アニメーション付きのGIF画像ファイルなど、素材そのものが一定の尺をもっている場合では、素材ファイルの元の尺よりも長いクリップにすることはできません。なお、そうした素材そのものが一定の尺をもっているようなクリップについては、クリップを選択した状態で「プロパティ &gt; 長さ」から長さを指定することで、ぴったり特定の長さに調整することができます。</p>
-<p>また、画像ファイルなど、素材そのものが一定の尺をもたない場合では、クリップを左に伸ばすことはできません（素材そのものが一定の尺をもっている場合では、その素材の始まりまでであれば、左にも伸ばすことができます）。</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Shotcutのような動画編集ソフトでは、プロジェクトの再生時間を「01:20:30:24」のような形式で表記します。これは、左から順に「時間:分:秒:フレーム番号」を表します。末尾の2ケタはフレーム番号（ただし、00から数えはじめます）なので、そのプロジェクトにおけるfpsの設定によって、1秒に繰り上がる数字が異なります。</p>
-<p>たとえば、25fpsのプロジェクトの場合、「01:20:30:24」は「1時間20分30秒の24フレームめ」を表し、この一つ次のフレームは「01:20:31:00」になります。</p>
-</div>
-</div>
-</section>
-<section id="トランジションをかける" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="トランジションをかける"><span class="header-section-number">3.3</span> トランジションをかける</h2>
-<p>映像作品において、カットが切り替わる際にかかる効果のことを「トランジション」と呼びます。たとえば、次の動画で使われているような効果のことです。</p>
-<div class="youtube">
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-トランジションの例
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="youtube-frame" style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;"><iframe width="100%" height="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/Zs9uTZ3Y2dc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-</div>
-</div>
-</div>
-</div>
-<p>トランジションを上手く活用すると、カットの切り替わりに余韻をもたせたりすることができます。</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>もっとも、一般に、カットが切り替わるときに常に何らかのトランジションをかけなければいけないという話ではありません。たとえば、次のリンク先にある動画では、カットの切り替わりにトランジションは一切かかっていません。</p>
-<p><a href="https://www2.nhk.or.jp/archives/movies/?id=D0002160954_00000">スズメ　公園の噴水で水浴び｜素材｜NHKアーカイブス</a></p>
-<p>むしろ、多くの映像作品において、ほとんどのカットの切り替わりはただ単にカットを繋げただけの映像になっています。こうした通常のカットの切り替わり方のことを「ジャンプカット」といいます。トランジションは、ふつう、ジャンプカットしたのでは得られない効果が求められるときにだけ使います。</p>
-<p>とくに狙いがないのにトランジションを多用してしまうと、かえって映像が素人っぽい仕上がりになりがちです。注意しましょう。</p>
-</div>
-</div>
-<p>Shotcutでクリップ間にトランジションを設定するには、まずはじめに、切り替え元のクリップと切り替え先のクリップとを一つのトラックに並べて配置します。それから、片方のクリップをドラッグして、もう一方のクリップと重なるようにすると、重なった部分が「トランジション」形式の新しいクリップになります。</p>
-<p>トランジションは、それ自体が一つのクリップなので、通常のクリップと同様に、端をつかんでドラッグすることで長さを調整できます。また、トランジションを選択した状態で、「プロパティ &gt; 映像」からトランジションの方法を変更できます。</p>
-<p>試しに、トランジションを設定しているようすを見てみましょう。次の例では「<span class="shotcut-icon document-new"></span>（その他を開く…）」から、青（<code>#ff0000ff</code>）・白（<code>#fffafafa</code>）・オレンジ（<code>#ffff5500</code>）の背景の「テキスト」を作成し、この順番に一つのトラックに並べてから、トランジションを設定しています。</p>
-<div class="youtube">
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-トランジションをかける
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="youtube-frame" style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;"><iframe width="100%" height="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/lvmgdUV0ugo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-</div>
-</div>
-</div>
-</div>
-<p>ここでは、各色の「テキスト」をそれぞれ2秒ずつ表示させ、それとは別に1秒ずつかけてトランジションするような動画をつくっています。つまり、各色のクリップの長さと重なり方は、次の図のようになっています。</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">gantt
-  title クリップの長さと重なりのようす
-  dateFormat  m:s
-  axisFormat  %M:%S
-  section 青
-  ff0000ff（3秒） :blue, 0:0, 3s
-  section 白
-  fffafafa（4秒） :white, 0:2, 4s
-  section オレンジ
-  ffff5500（3秒） :orange, 0:5, 3s
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-</section>
-<section id="フェードインとフェードアウト" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="フェードインとフェードアウト"><span class="header-section-number">3.4</span> フェードインとフェードアウト</h2>
-<p>トランジションのほかに、フェードインやフェードアウトをかけることもできます。</p>
-<p>フェードインというのは映像や音声をなめらかに表示・再生させる効果、フェードアウトはその反対になめらかに消す効果のことです。</p>
-<p>Shotcutにおけるフェードインやフェードアウトは、フェードにかかる持続時間（長さ）が設定されたフィルタです。ただ、ほかのフィルタとは違って、フェードインとフェードアウトにかぎっては、クリップの上の隅をつかんで内側に向かってドラッグすることによって、直観的に適用することができます。</p>
-<p>実際にフェードインやフェードアウトを適用しているようすを見てみましょう。</p>
-<div class="youtube">
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-フェードイン・アウト
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="youtube-frame" style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;"><iframe width="100%" height="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/Yki_GdQWLEY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-</div>
-</div>
-</div>
-</div>
-<p>この例のように、映像のフェードインとフェードアウトは、フェードイン・アウトするクリップの下に別のトラックがある場合では、クリップの不透明率を変える挙動になります。つまり、そうした場合では、フェードイン・アウトを適用したクリップが透明な状態から徐々に表示されたり、逆に徐々に透明になったりします。</p>
-<p>一方で、そのクリップの下に別のトラックがない場合には、黒い画面とのあいだでフェードイン・アウトします。この挙動は、フェードイン・アウトを適用したクリップを選択した状態で「フィルタ &gt; 映像のフェードイン（または、フェードアウト） &gt; 黒でフェードの代わりに不透明率を調整」というチェックボックスにチェックを入れることで変更することができます。</p>
-<p>なお、黒以外の単色とのあいだでフェードしたい場合は、フェードイン・アウトするクリップの下のトラックに目的の「色」を配置したうえで、「黒でフェードの代わりに不透明率を調整」するようにすれば実現できます。</p>
+<section id="特定の周波数帯の音量を下げる" class="level3" data-number="5.0.2">
+<h3 data-number="5.0.2" class="anchored" data-anchor-id="特定の周波数帯の音量を下げる"><span class="header-section-number">5.0.2</span> 特定の周波数帯の音量を下げる</h3>
+<ul>
+<li>ローパス・ハイパス・バンドパス</li>
+<li>ノッチ（刻み目）</li>
+<li>イコライザー（Equalizer）</li>
+</ul>
 
 
 </section>
@@ -789,13 +627,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./todo.html" class="pagination-link" aria-label="動画編集する前に">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">動画編集する前に</span></span>
+      <a href="./filter-video.html" class="pagination-link" aria-label="フィルタ（映像）">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">フィルタ（映像）</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./filter-video.html" class="pagination-link" aria-label="フィルタ（映像）">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">フィルタ（映像）</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./keyframe.html" class="pagination-link" aria-label="キーフレーム">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">キーフレーム</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
