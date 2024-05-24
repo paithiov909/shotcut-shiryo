@@ -30,8 +30,16 @@
   background-image: url("https://rawcdn.githack.com/mltframework/shotcut/a7d98d8e6a2d984ca049985021aed4d6d7042be9/icons/light/32x32/edit-paste.png");
 }
 
+.edit-undo {
+  background-image: url("https://rawcdn.githack.com/mltframework/shotcut/8907ee4cf8555bfdd87476e2beebc2d89020d9c3/icons/light/32x32/edit-undo.png");
+}
+
 .lift {
   background-image: url("https://rawcdn.githack.com/mltframework/shotcut/947d47030911293cca98d6af3554b131d3412c7a/icons/light/32x32/lift.png");
+}
+
+.list-add {
+  background-image: url("https://rawcdn.githack.com/mltframework/shotcut/8907ee4cf8555bfdd87476e2beebc2d89020d9c3/icons/light/32x32/list-add.png");
 }
 
 .list-remove {
@@ -61,6 +69,10 @@
 /* ripple */
 .target {
   background-image: url("https://rawcdn.githack.com/mltframework/shotcut/a7d98d8e6a2d984ca049985021aed4d6d7042be9/icons/light/32x32/target.png");
+}
+
+.view-grid {
+  background-image: url("https://rawcdn.githack.com/mltframework/shotcut/8907ee4cf8555bfdd87476e2beebc2d89020d9c3/icons/light/32x32/view-grid.png");
 }
 
 .zoom-in {
