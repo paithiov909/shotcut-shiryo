@@ -201,7 +201,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="フィルタについて" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="フィルタについて"><span class="header-section-number">4.1</span> フィルタについて</h2>
 <p>「<a href="intro.html#プロジェクトを保存する">Shotcut 資料 - 1&nbsp; 基本操作</a>」のなかで、Shotcutのような動画編集ソフトでは、取り込んだ素材を「どのタイミングで表示・再生させるか」のほかに「どのように表示・再生させるか」を決めていくことによって、動画を仕上げていくと説明しました。</p>
-<p>素材を「どのように表示・再生させるか」は、クリップやトラックに対してさまざまな効果を付ける機能を利用することによって設定することができます。Shotcutでは、そうしたクリップやトラックに何らかの効果を付ける機能を「フィルタ」と呼びます。</p>
+<p>素材を「どのように表示・再生させるか」は、クリップに対してさまざまな効果を付ける機能を利用することによって設定することができます。Shotcutでは、そうしたクリップに何らかの効果を付ける機能を「フィルタ」と呼びます。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -212,7 +212,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>フィルタは、クリップやトラックのほか、タイムライン全体を選択してかけることもできます。しかし、以降の説明では、基本的にクリップに対して適用するものとして紹介しています。</p>
+<p>フィルタは、クリップのほか、トラックやタイムライン全体を選択してかけることもできます。しかし、以降の説明では、基本的にクリップに対して適用するものとして紹介しています。</p>
 </div>
 </div>
 <p>「<a href="transition.html">Shotcut 資料 - 3&nbsp; トランジション</a>」で紹介した、テキストボックスをつくる「テキスト：シンプル」や、映像をフェードインさせる「映像のフェードイン」なども、フィルタの一種です。Shotcutに実装されているフィルタには、この資料で紹介するもの以外にもたくさんの種類がありますが、ここではとくに使用頻度の高そうなものだけを紹介します。</p>
@@ -370,12 +370,12 @@ Note
 </section>
 <section id="合成モード" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="合成モード"><span class="header-section-number">4.4</span> 合成モード</h2>
-<p>「合成モード」を適用すると、指定した方法で、そのクリップを下にあるクリップと合成します。</p>
-<p>このフィルタは、Adobe Photoshopなどの画像編集ソフトにおける、いわゆるブレンドモードに相当します。</p>
+<p>「合成モード」を適用すると、そのクリップを自身よりも下にあるクリップと指定した方法で合成します。このフィルタは、Adobe Photoshopなどの画像編集ソフトにおける、いわゆるブレンドモードに相当します。</p>
+<p>Shotcutの「合成モード」には、次のような合成の方法が実装されています。ここに挙げているものがすべてではありませんが、Photoshopのブレンドモードと比べると選べる種類は少ないです。</p>
 <div>
 <div class="table-responsive">
 <table class="table-bordered table-striped table" data-quarto-postprocess="true">
-<caption><a href="https://note.himenoke.com/blending-mode/">Photoshopの使い方！描画モードを理解する | 姫野家クリエイティブノート</a>を元に作成</caption>
+<caption>「<a href="https://note.himenoke.com/blending-mode/">Photoshopの使い方！描画モードを理解する | 姫野家クリエイティブノート</a>」を元に作成</caption>
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -390,8 +390,7 @@ Note
 <tr class="odd">
 <td>通常</td>
 <td><ul>
-<li>重ねる</li>
-<li>ディザ（「ディザ」という名前の別のフィルタ）</li>
+<li>重ねる（「合成モード」を適用しないのと同じ挙動）</li>
 </ul></td>
 </tr>
 <tr class="even">
@@ -422,11 +421,64 @@ Note
 </table>
 </div>
 </div>
+<p>実際に「合成モード」を適用している映像を見てみましょう。次の例は、同一の素材に対して、上の表にまとめた「合成モード」を画面の右半分にだけ適用した動画です。</p>
+<div class="youtube">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+「合成モード」見本
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="youtube-frame" style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;"><iframe width="100%" height="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/ogyBJ-5s5q0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
+</div>
+</div>
+</div>
+<p>この映像のように、「合成モード」は、同じクリップを重ねて合成するような用途で使えます。そのほかにも、映像素材を配布しているWebサイトからダウンロードできるような、よくあるエフェクトを合成するのにも利用できます。</p>
+<p>たとえば、次の映像は「<a href="https://sozaino.site/v/archives/633">テレビノイズの背景 | OKUMONO＋V</a>」として配布されている不透明な素材をオーバーレイを使って合成したものです。</p>
+<div class="youtube">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+「合成モード（オーバーレイ）」
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="youtube-frame" style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;"><iframe width="100%" height="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/3Vbq904jtCQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>「合成モード」で素材を合成するとき、合成する素材や方法の組み合わせによっては、出力される映像の色が飛んでしまったり、つぶれてしまったりすることがあるかもしれません。そうした場合、映像の色を調整するフィルタを利用することで、色を修整することができます。</p>
+<p>映像の色を調整するフィルタについては、「<a href="color-grading.html">Shotcut 資料 - 7&nbsp; カラーグレーディング</a>」のなかでまとめて扱います。</p>
+</div>
+</div>
 </section>
 <section id="クロマキー" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="クロマキー"><span class="header-section-number">4.5</span> クロマキー</h2>
-<p>「クロマキー：シンプル」を適用すると、指定した色を透過色（transparent）と見なしながら、そのクリップを下にあるクリップと合成します。</p>
-<p>このような画像処理は映像制作の世界でよく用いられる技術で、一般にクロマキー合成（Chroma key compositing）と呼ばれます。</p>
+<p>「クロマキー：シンプル」を適用すると、指定した色を透過色（transparent）と見なしながら、そのクリップを自身よりも下にあるクリップと合成します。</p>
+<p>このような画像処理は映像制作の世界でよく用いられる技術で、クロマキー合成（Chroma key compositing）と呼ばれます。</p>
 <ul>
 <li><a href="https://avrjapan.com/vp_article04/">クロマキー合成とは？背景の魔法の技術を解説 - AVR Japan</a></li>
 <li><a href="https://www.ae-shark.com/green/">クロマキーに最適な色について考えてみた。 | Ae Shark</a></li>
