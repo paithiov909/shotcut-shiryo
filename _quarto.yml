@@ -7,7 +7,12 @@ book:
   title: "Shotcut 資料"
   description: |
     Shotcutの基本的な使い方を紹介します
+  image: assets/video-editing.png
   favicon: favicon.ico
+  open-graph:
+    locale: ja
+  twitter-card:
+    card-style: summary
   chapters:
     - index.qmd
     - intro.qmd
