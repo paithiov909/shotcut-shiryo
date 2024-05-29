@@ -1,6 +1,9 @@
 project:
   type: book
   output-dir: docs
+  resources:
+    - google4a285867c35ac84f.html
+    - BingSiteAuth.xml
 
 book:
   site-url: https://paithiov909.github.io/shotcut-shiryo

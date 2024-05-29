@@ -56,6 +56,11 @@
 - [Mixkit](https://mixkit.co/)
 - [OKUMONO+V](https://sozaino.site/v/)
 - [YouTuberのための素材屋さん](https://ytsozaiyasan.com/)
-- [フリーBGM（音楽素材）無料ダウンロード｜DOVA-SYNDROME](https://dova-s.jp/)
 
 動画ファイルや音声ファイルをダウンロードできるWebサイトは、ここにあげたもののほかにもたくさんあります。適宜検索したうえで、それぞれのライセンスや利用規約にしたがって使用してください。
+
+---
+
+一部の例のなかで使っている次の画像については、Inkscapeを使って独自に作成したものです。ご自由にお使いください。
+
+![「衝撃の一言炸裂」の画像](assets/sozai.png)

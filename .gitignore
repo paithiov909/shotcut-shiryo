@@ -5,8 +5,9 @@
 *_cache
 *_files
 /assets/*.mp4
+/assets/*.wav
 /youtube/
-*.docx
-*.mlt
 !docs/**/*
 !*.qmd
+*.docx
+*.mlt
