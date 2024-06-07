@@ -1,3 +1,7 @@
+---
+date-modified: today
+---
+
 # はじめに {.unnumbered}
 
 この資料は、[Shotcut](https://www.shotcut.org/)を使った基本的な動画編集のやり方を紹介するものです。
