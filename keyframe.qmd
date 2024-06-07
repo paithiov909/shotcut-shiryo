@@ -170,9 +170,9 @@ ggplot(
 
 Shotcutでキーフレームにイージングを設定するには、イージングを設定したいキーフレームを右クリックすると表示されるコンテキストメニューから、適用したいイージング関数を選択します。
 
-「Ease In」と「Ease In/Out」については、始点になるキーフレームを右クリックすると表示されるコンテキストメニューから「To Next... > []{.shotcut-icon .keyframe-ease-in}Ease In...」または「To Next... > []{.shotcut-icon .keyframe-ease-inout}Ease In/Out...」を選び、適用したいイージング関数を選択します。
+「Ease In」と「Ease In/Out」については、始点になるキーフレームを右クリックすると表示されるコンテキストメニューから「To Next > []{.shotcut-icon .keyframe-ease-in}Ease In」または「To Next > []{.shotcut-icon .keyframe-ease-inout}Ease In/Out」を選び、適用したいイージング関数を選択します。
 
-「Ease Out」については、終点になるキーフレームを右クリックすると表示されるコンテキストメニューから「From Previous... > []{.shotcut-icon .keyframe-ease-out}Ease Out...」を選び、適用したいイージング関数を選択します。
+「Ease Out」については、終点になるキーフレームを右クリックすると表示されるコンテキストメニューから「From Previous > []{.shotcut-icon .keyframe-ease-out}Ease Out」を選び、適用したいイージング関数を選択します。
 
 :::{.callout-tip}
 一般に、何かを目標の位置に表示させたり、移動させたりするようなアニメーションでは、イーズアウトを適用すると効果的な場合が多いとされます。
