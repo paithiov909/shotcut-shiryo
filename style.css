@@ -6,6 +6,11 @@
   background: no-repeat center/90%;
 }
 
+/* keyframe */
+.chronometer {
+  background-image: url("https://rawcdn.githack.com/mltframework/shotcut/d291eacd740a241d5618b8499ae6cccb8244678c/icons/light/32x32/chronometer.png");
+}
+
 .document-new {
   background-image: url("https://rawcdn.githack.com/mltframework/shotcut/823625e4149c88eb0ac4a6a66cbe06802f294cf9/icons/light/32x32/document-new.png");
 }
@@ -32,6 +37,18 @@
 
 .edit-undo {
   background-image: url("https://rawcdn.githack.com/mltframework/shotcut/8907ee4cf8555bfdd87476e2beebc2d89020d9c3/icons/light/32x32/edit-undo.png");
+}
+
+.keyframe-ease-in {
+  background-image: url("https://rawcdn.githack.com/mltframework/shotcut/c25bae94347d0781bf1a876febb940bf74334bbe/icons/light/32x32/keyframe-ease-in.png");
+}
+
+.keyframe-ease-inout {
+  background-image: url("https://rawcdn.githack.com/mltframework/shotcut/c25bae94347d0781bf1a876febb940bf74334bbe/icons/light/32x32/keyframe-ease-inout.png");
+}
+
+.keyframe-ease-out {
+  background-image: url("https://rawcdn.githack.com/mltframework/shotcut/c25bae94347d0781bf1a876febb940bf74334bbe/icons/light/32x32/keyframe-ease-out.png");
 }
 
 .lift {
