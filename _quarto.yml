@@ -10,6 +10,7 @@ book:
   title: "Shotcut 資料"
   description: |
     Shotcutの基本的な使い方を紹介します
+  date: today
   image: assets/video-editing.png
   favicon: favicon.ico
   open-graph:
@@ -25,6 +26,8 @@ book:
     - filter-audio.qmd
     - keyframe.qmd
     - color-grading.qmd
+  appendices:
+    - subtitles.qmd
 
 format:
   html:
