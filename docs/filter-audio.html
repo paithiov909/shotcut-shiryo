@@ -254,6 +254,21 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>この動画では、同じ音声が3回繰り返されるように配置されています。ここで使われている音声ファイルは、レストランの店内の環境音をイメージしてあらかじめミックスされたものです。とくに近くの席にいると思われる女性が英語で何かを話す声や、赤ちゃんの声のほか、その他の人々が会話している声などが、喧騒のように鳴っていることがわかります。</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>このページに埋め込んでいるYouTube動画では、同じ音声をそれぞれ異なる音量で再生しているのですが、実際にYouTube動画として再生するかぎりでは、その違いを聞き取るのは難しいかもしれません。</p>
+<p>というのも、YouTubeのプレイヤーにはユーザーが調整できるボリュームコントロールとは別に、動画の音量を自動的に調整する機能がそなわっています。そのため、ふつうに再生したときに大きくなりすぎるだろう音については自動で減音されてしまい、その動画の本来の音量では再生されません。</p>
+<p>動画の本来の音量を確認するには、動画を再生中のYouTubeプレイヤーを右クリックすると表示されるメニューのなかから「詳細統計情報」をオンにしてください。表示される統計情報の「Volume / Normalized」の項目のNormalizedの値が自動減音機能のボリュームであるため、この値がより小さくなっている動画ほど、動画の本来の音量が大きいことの目安になります。</p>
+</div>
+</div>
 <p>この動画の音量を調整する前に、まず、ここでいう動画の音量とは何かを説明します。私たちが映像作品を再生するとき、映像作品の音量は、再生機器のボリュームを調整することによっても、自由に変更することができます。つまり、動画が実際にどれくらいの大きさの音で再生されるかは、その動画が再生される環境次第で変わってしまうものです。</p>
 <p>そのため、Shotcutのような動画編集ソフトでは、動画の音量を「デジタル音声として正常に出力できる音の最大値を0としたときの相対値」によって表示します。このような音量の単位は「dBFS（デシベル・フルスケール）」と呼ばれるもので、この意味での動画の音量は、編集レイアウトでは画面の右上あたりに表示されている「音声ピークメーター」から確認することができます。</p>
 <p>このdBFSの値が0よりも上に振り切れてしまうと、再生時に、いわゆる「音割れ」が発生する状態になります。したがって、動画の音量を調整する際には、音声ピークメーターのピークが上端に振り切れない範囲で、適切だと思われる大きさに音量を調整することになります。</p>
@@ -265,7 +280,7 @@ ul.task-list li input[type="checkbox"] {
 <p>次の例は、上の動画について「ゲイン・音量」を適用して、<code>4.0dB</code>だけ音量を大きくしたものです。</p>
 <div class="youtube">
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -274,7 +289,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="youtube-frame" style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;"><iframe width="100%" height="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/gUKAJ9VrBHU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </div>
@@ -290,7 +305,7 @@ ul.task-list li input[type="checkbox"] {
 <p>次の動画は、先ほどの例について、「リミット」を<code>-3.0dB</code>として「リミッター」を適用した例です。</p>
 <div class="youtube">
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -299,7 +314,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="youtube-frame" style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;"><iframe width="100%" height="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/F4w3xyyvHws" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </div>
@@ -329,7 +344,7 @@ Tip
 <p>次の動画は、先ほどまでと同じクリップについて、「コンプレッサー」と「リミッター」を適用して音量を調整した例です。</p>
 <div class="youtube">
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -338,7 +353,7 @@ Tip
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="youtube-frame" style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;"><iframe width="100%" height="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/xUCRm5y5BDQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </div>
