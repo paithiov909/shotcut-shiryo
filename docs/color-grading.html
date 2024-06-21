@@ -194,7 +194,25 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#映像の色づくりについて" id="toc-映像の色づくりについて" class="nav-link active" data-scroll-target="#映像の色づくりについて"><span class="header-section-number">7.1</span> 映像の色づくりについて</a></li>
+  <li><a href="#映像の色を調整するカラーコレクション" id="toc-映像の色を調整するカラーコレクション" class="nav-link" data-scroll-target="#映像の色を調整するカラーコレクション"><span class="header-section-number">7.2</span> 映像の色を調整する（カラーコレクション）</a>
+  <ul class="collapse">
+  <li><a href="#ホワイトバランス" id="toc-ホワイトバランス" class="nav-link" data-scroll-target="#ホワイトバランス"><span class="header-section-number">7.2.1</span> ホワイトバランス</a></li>
+  <li><a href="#色相明度彩度" id="toc-色相明度彩度" class="nav-link" data-scroll-target="#色相明度彩度"><span class="header-section-number">7.2.2</span> 色相・明度・彩度</a></li>
+  <li><a href="#カラーコレクション" id="toc-カラーコレクション" class="nav-link" data-scroll-target="#カラーコレクション"><span class="header-section-number">7.2.3</span> カラーコレクション</a></li>
+  <li><a href="#輝度" id="toc-輝度" class="nav-link" data-scroll-target="#輝度"><span class="header-section-number">7.2.4</span> 輝度</a></li>
+  </ul></li>
+  <li><a href="#lutを適用するカラーグレーディング" id="toc-lutを適用するカラーグレーディング" class="nav-link" data-scroll-target="#lutを適用するカラーグレーディング"><span class="header-section-number">7.3</span> LUTを適用する（カラーグレーディング）</a>
+  <ul class="collapse">
+  <li><a href="#lutルックアップテーブルについて" id="toc-lutルックアップテーブルについて" class="nav-link" data-scroll-target="#lutルックアップテーブルについて"><span class="header-section-number">7.3.1</span> LUT（ルックアップテーブル）について</a></li>
+  <li><a href="#lut3d" id="toc-lut3d" class="nav-link" data-scroll-target="#lut3d"><span class="header-section-number">7.3.2</span> LUT（3D）</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -221,8 +239,284 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p>🚧準備中🚧</p>
 </blockquote>
+<section id="映像の色づくりについて" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="映像の色づくりについて"><span class="header-section-number">7.1</span> 映像の色づくりについて</h2>
+<p>私たちが普段目にしている映像作品は、ほとんどの場合、カメラで撮影されたそのままの映像ではなく、それぞれのシーンの雰囲気にあうように色を調整したうえで公開されています。</p>
+<p>そのシーンの雰囲気にあわせて、映像の色調を調整する作業のことを「カラーグレーディング」といいます。カラーグレーディングは、本格的にやろうとすると専門的な知識が必要であるのにくわえて、Shotcutでやるには不便なため、比較的難しい作業といえるかもしれません。</p>
+<p>一方で、手軽にはじめられる範囲では、後で紹介する「LUT（3D）」というフィルタを使うことによって、映像の色調をさまざまに変えることができます。</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/shotcut-color-raw.png" class="img-fluid figure-img"></p>
+<figcaption>1. 元の映像</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/shotcut-color-lut-only.png" class="img-fluid figure-img"></p>
+<figcaption>2. LUTのみを適用した映像</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/shotcut-color-corrected.png" class="img-fluid figure-img"></p>
+<figcaption>3. 色を修正した映像</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/shotcut-color-corrected-lut.png" class="img-fluid figure-img"></p>
+<figcaption>4. 色を修正してからLUTを適用した映像</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>どのような狙いをもってカラーグレーディングをおこなうかは、その映像作品で目指したいイメージ次第なので、これといった正解はありません。ただ、たとえばYouTubeに投稿するための動画であれば、彩度の低いクールな印象の映像よりも、彩度の高い鮮やかな映像のほうが目立つといった傾向はありそうです。</p>
+<p>そこで、ここでは、彩度を不自然にならない範囲で上げつつ、コントラストを高くすることを目指すことにします。このとき、上の画像2のように、いきなりLUTを適用してカラーグレーディングしてもよいのですが、その前に、画像3のような、より「自然に見える」色調に近づけてからLUTを適用することで、画像4のような、より見映えのよい仕上がりにすることができます。</p>
+<p>この例のように、カラーグレーディングをするときには、ふつう、一度そのシーンとしてニュートラルな発色になるように色調を調整する「カラーコレクション」という作業をセットでおこないます。ここでは、上の画像で使っているのと同じ動画素材に対して、Shotcut上で簡単にカラーコレクションをおこなってから、カラーグレーディングする例を紹介します。</p>
+</section>
+<section id="映像の色を調整するカラーコレクション" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="映像の色を調整するカラーコレクション"><span class="header-section-number">7.2</span> 映像の色を調整する（カラーコレクション）</h2>
+<section id="ホワイトバランス" class="level3" data-number="7.2.1">
+<h3 data-number="7.2.1" class="anchored" data-anchor-id="ホワイトバランス"><span class="header-section-number">7.2.1</span> ホワイトバランス</h3>
+<p>Shotcutには、映像の色調を調整することができる複数のフィルタが実装されています。ここでは、そうしたフィルタのなかから、カラーコレクションの目的である「自然に見える」色調を実現することに役立ちそうなものを4つ紹介します。</p>
+<p>はじめに紹介する「ホワイトバランス」は、映像の「色温度」を調整したような効果を与えることができるフィルタです。</p>
+<p>「色温度」というのは、映像中の無彩色の「白っぽさ」に対応するような値で、低いと映像全体が赤っぽくなり、高いと映像全体が青っぽくなります。フィルタのデフォルトの値は<code>6,500K</code>です（Shotcutでは色温度の単位は「度」になっていますが、ここでは「K（ケルビン）」としています）。</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/shotcut-wb-3000k.png" class="img-fluid figure-img"></p>
+<figcaption>3000K（電球色）</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/shotcut-wb-3500k.png" class="img-fluid figure-img"></p>
+<figcaption>3500K（温白色）</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/shotcut-wb-4200k.png" class="img-fluid figure-img"></p>
+<figcaption>4200K（白色）</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/shotcut-wb-5000k.png" class="img-fluid figure-img"></p>
+<figcaption>5000K（昼白色）</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/shotcut-wb-6700k.png" class="img-fluid figure-img"></p>
+<figcaption>6700K（昼光色）</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/shotcut-wb-8000k.png" class="img-fluid figure-img"></p>
+<figcaption>8000K</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>蛍光灯などの照明器具における色温度の目安としては<code>5,000K</code>程度が「自然に見える」色温度だとされます。ただし、ここでいう「自然に見える」というのは、昼間の自然光の下で見たような色温度であるといった意味です。つまり、これくらいの色温度のもとで白色が（赤っぽくも青白くもない）白に見えるということなのですが、たとえば、夕焼けを映したシーンや夜景を映したシーンなどにおいてもそのような色温度に調整してしまうのはかえって不自然なため、実際には、あくまでそのシーンとして「自然に見える」色温度に調整する必要があります。</p>
+<p>ここでは、とりあえず、デフォルト値とほぼ変わらない<code>7,000K</code>に調整しておきます。</p>
+</section>
+<section id="色相明度彩度" class="level3" data-number="7.2.2">
+<h3 data-number="7.2.2" class="anchored" data-anchor-id="色相明度彩度"><span class="header-section-number">7.2.2</span> 色相・明度・彩度</h3>
+<p>次に紹介する「色相・明度・彩度」は、映像の色相と明度・彩度をまとめて調整できるフィルタです。</p>
+<p>色相については、「色相」という値（角度）を設定することによって、映像の色相を色相環上で回転させることができます。ただし、これはそれほど便利でないので、実際に色味を調整する手段としては下で紹介する「カラーコレクション」を利用したほうがよいでしょう。</p>
+<p>明度・彩度については、それぞれの対応する値（パーセント）を設定することで、高くしたり低くしたりできます。</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/shotcut-sat-100.png" class="img-fluid figure-img"></p>
+<figcaption>彩度を100%に設定した映像</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/shotcut-sat-120.png" class="img-fluid figure-img"></p>
+<figcaption>彩度を120%に設定した映像</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>元の映像にもよるものの、大雑把にいうと、彩度は<code>120%</code>くらいに上げてしまうのがおすすめです。明度は高くしても低くしても彩度は下がる関係にあるため、明度も同時にさわる場合には、そのぶんだけ彩度も余分に上げるようにするとよいです。</p>
+<p>ここでは、彩度だけを<code>120%</code>に設定しておきます。</p>
+</section>
+<section id="カラーコレクション" class="level3" data-number="7.2.3">
+<h3 data-number="7.2.3" class="anchored" data-anchor-id="カラーコレクション"><span class="header-section-number">7.2.3</span> カラーコレクション</h3>
+<p>「カラーコレクション」は、カラーサークルと呼ばれるUIを使って、映像の色調をさまざまに調整することができるフィルタです。クリップに「カラーコレクション」を適用すると、それぞれにかかり方の異なる3つのカラーサークルを操作することができます。それぞれのカラーサークルはRGBの各チャンネルごとにかかり具合を調整できるようになっており、各値を適切に設定することによって、映像の色調をさまざまに調整できます。</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>もっとも、カラーサークルをマウスで操作して狙い通りの色調を実現するのは難しいだろうと思われるので、実際には大まかな値をキーボードで入力してから、微調整して使うことになるはずです。</p>
+</div>
+</div>
+<p>3つのカラーサークルは、左にあるものから順に「リフト」「ガンマ」「ゲイン」というかかり方に対応しています。これらはいずれも、RGBの各チャンネルごとに、設定したかかり具合で値をシフトさせるような作用をするもので、ここでかかり方と表現しているのは、そのシフトの方法に相当するものです。</p>
+<p>「リフト」「ガンマ」「ゲイン」は、大まかには、次の表にまとめているように作用します（「ハイライト」というのは映像中の明るい部分のこと、「シャドウ」というのは暗い部分のことを意味します）。</p>
+<div>
+<div class="table-responsive">
+<table class="table-hover table-bordered table" data-quarto-postprocess="true">
+<caption>「<a href="https://www.blog.urban-cafeteria.com/color-wheel/">【小学生でも分かる】DaVinci Resolveのカラーホイールの使い方 - Urban Cafeteria Blog</a>」を元に作成</caption>
+<thead>
+<tr class="header">
+<th class="text-center" data-quarto-table-cell-role="th"></th>
+<th class="text-center" data-quarto-table-cell-role="th">上げる</th>
+<th class="text-center" data-quarto-table-cell-role="th">下げる</th>
+</tr>
+</thead>
+<tbody class="table-group-divider">
+<tr class="odd">
+<td class="table-active">リフト</td>
+<td>ハイライトはそのままに、シャドウのほうを明るくする</td>
+<td>ハイライトはそのままに、シャドウのほうを暗くする</td>
+</tr>
+<tr class="even">
+<td class="table-active">ガンマ</td>
+<td>全体的に明るくする（シャドウのコントラストは上がり、ハイライトのコントラストは下がる）</td>
+<td>全体的に暗くする（シャドウのコントラストは下がり、ハイライトのコントラストは上がる）</td>
+</tr>
+<tr class="odd">
+<td class="table-active">ゲイン</td>
+<td>全体的にコントラストを上げる（白く飛ぶ箇所が多くなる）</td>
+<td>全体的にコントラストを下げる</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>ここでは、この後で紹介する「輝度」というフィルタと組み合わせてコントラストを高めるために、リフトを少し下げて、シャドウを暗くしてみようと思います。この下にあるスクリーンショットでは、レイアウトを色用レイアウトに変更して、映像波形を表示しています（画面の右側中段に表示されているパネル）。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/shotcut-color-correction-1.png" class="img-fluid figure-img"></p>
+<figcaption>カラーコレクションを適用する前の映像。映像波形の白い部分の上下に黒い領域がある</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>映像波形は、大雑把にいうと、「再生ヘッドがある位置の映像について、横方向に適当に分割しながら、その各列について明るさの分布を描いたグラフ」です。画面内のどのあたりがどれくらい明るいかを大まかに把握するのに使えます。</p>
+</div>
+</div>
+<p>この映像波形を見ると、白い部分が帯のように連なっていて、その上下に黒い領域があることがわかります。一方で、ここで目指しているような（画面全体にわたって）コントラストが高い映像では、ハイライトとシャドウの明暗差が大きくなるため、理想的には、映像波形で確認できる白い帯のような部分が薄っすらとグラフ全体に広がるようになり、黒い領域は狭まるはずです。</p>
+<p>そこで、この下のスクリーンショットでは、リフトを<code>10%</code>から<code>18%</code>ほど下げてみています。上のと比べると、映像波形の白い帯のような部分が少しだけ下に下がっていることがわかります。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/shotcut-color-correction-2.png" class="img-fluid figure-img"></p>
+<figcaption>カラーコレクションでリフトを下げた映像。映像波形の白い部分が下方向にやや広がった</figcaption>
+</figure>
+</div>
+</section>
+<section id="輝度" class="level3" data-number="7.2.4">
+<h3 data-number="7.2.4" class="anchored" data-anchor-id="輝度"><span class="header-section-number">7.2.4</span> 輝度</h3>
+<p>最後に紹介する「輝度」は、映像の輝度を上げたり下げたりできるフィルタです。</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>ここでいう「輝度」は、画像処理の文脈で使われる度合いで、高くしていくと、シーンとしてのまぶしさのようなものを感じさせる表現になります。</p>
+<p>もう少し詳しく知りたい場合は、次の記事を読んでみてください。</p>
+<p><a href="https://cg-squid.com/2021/07/23/meido_kido_tigai/">明度と輝度の違い | ＣＧすくいどる</a></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>「輝度」では、白く飛んだ箇所を暗くしたり、黒くつぶれた箇所を明るくしたりすることはできないので、そうした調整をしたい場合は「色相・明度・彩度」で明度を調整するか、「レベル」などの別のフィルタを使います。</p>
+</div>
+</div>
+<p>輝度を上げると、直観的には、映像を全体的に明るくすることができるのですが、このとき、もともと明るく見える色と暗く見える色とでは上り幅に差が生じるため、結果的にコントラストが高まることになります。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/shotcut-color-correction-3.png" class="img-fluid figure-img"></p>
+<figcaption>輝度を上げた映像。映像波形の白い部分が上方向にも広がっている</figcaption>
+</figure>
+</div>
+<p>この上のスクリーンショットは、ここまでに説明したフィルタとともに、「輝度」を<code>118%</code>に設定して適用しています。映像波形を確認すると、先ほどまでと比べて、白い帯のような部分が薄っすらと上のほうにも広がっていることがわかります。</p>
+</section>
+</section>
+<section id="lutを適用するカラーグレーディング" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="lutを適用するカラーグレーディング"><span class="header-section-number">7.3</span> LUTを適用する（カラーグレーディング）</h2>
+<section id="lutルックアップテーブルについて" class="level3" data-number="7.3.1">
+<h3 data-number="7.3.1" class="anchored" data-anchor-id="lutルックアップテーブルについて"><span class="header-section-number">7.3.1</span> LUT（ルックアップテーブル）について</h3>
+</section>
+<section id="lut3d" class="level3" data-number="7.3.2">
+<h3 data-number="7.3.2" class="anchored" data-anchor-id="lut3d"><span class="header-section-number">7.3.2</span> LUT（3D）</h3>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
