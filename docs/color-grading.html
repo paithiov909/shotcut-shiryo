@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -236,9 +236,6 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<blockquote class="blockquote">
-<p>🚧準備中🚧</p>
-</blockquote>
 <section id="映像の色づくりについて" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="映像の色づくりについて"><span class="header-section-number">7.1</span> 映像の色づくりについて</h2>
 <p>私たちが普段目にしている映像作品は、ほとんどの場合、カメラで撮影されたそのままの映像ではなく、それぞれのシーンの雰囲気にあうように色を調整したうえで公開されています。</p>
@@ -405,9 +402,8 @@ Note
 </div>
 <p>3つのカラーサークルは、左にあるものから順に「リフト」「ガンマ」「ゲイン」というかかり方に対応しています。これらはいずれも、RGBの各チャンネルごとに、設定したかかり具合で値をシフトさせるような作用をするもので、ここでかかり方と表現しているのは、そのシフトの方法に相当するものです。</p>
 <p>「リフト」「ガンマ」「ゲイン」は、大まかには、次の表にまとめているように作用します（「ハイライト」というのは映像中の明るい部分のこと、「シャドウ」というのは暗い部分のことを意味します）。</p>
-<div>
 <div class="table-responsive">
-<table class="table-hover table-bordered table" data-quarto-postprocess="true">
+<table class="table-hover table-bordered caption-top table" data-quarto-postprocess="true">
 <caption>「<a href="https://www.blog.urban-cafeteria.com/color-wheel/">【小学生でも分かる】DaVinci Resolveのカラーホイールの使い方 - Urban Cafeteria Blog</a>」を元に作成</caption>
 <thead>
 <tr class="header">
@@ -434,7 +430,6 @@ Note
 </tr>
 </tbody>
 </table>
-</div>
 </div>
 <p>ここでは、この後で紹介する「輝度」というフィルタと組み合わせてコントラストを高めるために、リフトを少し下げて、シャドウを暗くしてみようと思います。この下にあるスクリーンショットでは、レイアウトを色用レイアウトに変更して、映像波形を表示しています（画面の右側中段に表示されているパネル）。</p>
 <div class="quarto-figure quarto-figure-center">
@@ -503,16 +498,56 @@ Tip
 <figcaption>輝度を上げた映像。映像波形の白い部分が上方向にも広がっている</figcaption>
 </figure>
 </div>
-<p>この上のスクリーンショットは、ここまでに説明したフィルタとともに、「輝度」を<code>118%</code>に設定して適用しています。映像波形を確認すると、先ほどまでと比べて、白い帯のような部分が薄っすらと上のほうにも広がっていることがわかります。</p>
+<p>この上のスクリーンショットでは、ここまでに説明したフィルタとともに、「輝度」を<code>118%</code>に設定して適用しています。映像波形を確認すると、先ほどまでと比べて、白い帯のような部分が薄っすらと上のほうにも広がっていることがわかります。</p>
 </section>
 </section>
 <section id="lutを適用するカラーグレーディング" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="lutを適用するカラーグレーディング"><span class="header-section-number">7.3</span> LUTを適用する（カラーグレーディング）</h2>
 <section id="lutルックアップテーブルについて" class="level3" data-number="7.3.1">
 <h3 data-number="7.3.1" class="anchored" data-anchor-id="lutルックアップテーブルについて"><span class="header-section-number">7.3.1</span> LUT（ルックアップテーブル）について</h3>
+<p>さて、ここまでの説明では、扱っている映像の彩度を不自然にならない範囲で上げつつ、コントラストを高くするようなカラーグレーディングをおこなうために、その前段階として、4つのフィルタを適用しながらカラーコレクションをしてきました。</p>
+<p>ここまでに紹介したフィルタを適用した映像は、このページの冒頭で見た、画像3のような状態です。ここから、より鮮やかな印象の映像に仕上げるために、LUT（ルックアップテーブル）を適用して、画像4のような映像にすることにします。</p>
+<p>ところで、いま「LUT（ルックアップテーブル）を適用して」と書きましたが、ここでいうLUTというのは、Shotcutに実装されているフィルタのことではありません。実は、LUT（ルックアップテーブル）というのは、ある色空間のなかで任意の範囲にある色を別の色に置き換える用途で使われる「色の対応表」のようなもののことで、実体としてはただのテキストファイルです。</p>
+<p>そういった「色の対応表」には、カラーグレーディングのために用いられるもののほかに、プロ向けの機材で撮影された映像の色を補正する用途で用いられるものがありますが、ここでは前者のような対応表を念頭にLUT（ルックアップテーブル）と呼んでいます。この意味でのLUTは、大まかなイメージとしては、スマホの画像編集アプリにおけるフィルタ機能のように利用できるものです。それ自体で細かな調整をすることはできないものの、Shotcutで読み込んでクリップに適用することで、色調をそのLUTが目指す雰囲気のものに手軽に変換することができます。</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>動画編集ソフトのなかには、テキストファイルとしての3次元LUT（拡張子が<code>.cube</code>であるファイルなど）それ自体を書き出せるものもありますが、Shotcutにはそのような機能はありません。そのため、ShotcutでLUTを扱うといった場合、既存のLUTを読み込んで映像に適用するという使い方に限定されます。</p>
+</div>
+</div>
 </section>
 <section id="lut3d" class="level3" data-number="7.3.2">
 <h3 data-number="7.3.2" class="anchored" data-anchor-id="lut3d"><span class="header-section-number">7.3.2</span> LUT（3D）</h3>
+<p>ShotcutでLUTを読み込んでクリップに適用するには、「LUT（3D）」というフィルタを使います。</p>
+<p>ここでは「<a href="https://www.shutterstock.com/blog/free-luts-for-log-footage">48 FREE Custom LUTs To Enhance Your Log Footage</a>」というWebページで配布されている、<code>Contrail 35.CUBE</code>というLUTを適用してみることにします。このページの「Download the 35 Free LUTs Now」というセクションにある「DOWNLOAD MORE FREE LUTS HERE」と書かれたボタンから<code>RS-35-Free-LUTs.zip</code>というファイルをダウンロードして展開すると、<code>35 Free LUTs</code>というフォルダのなかに、そのLUT（<code>.cube</code>ファイル）が含まれているはずです。</p>
+<p>このファイルを「LUT（3D）」で読み込んで適用するには、クリップに「LUT（3D）」フィルタを追加した後、そのメニューのなかにある「開く…」というボタンを押します。すると、ファイルを選択するためのメニューが開くので、そのメニューから<code>Contrail 35.CUBE</code>を選択します。なお、このボタンの下にある「補間」という値は、読み込んだ3次元LUTを適用する際に用いられる補間の方法を指定するものです。おそらく下にあるものほど仕上がりがきれいになるはずですが、実際に動画ファイルの書き出しにかかる時間は増えます。</p>
+<p>この下の動画は、ここまでに紹介した一連のフィルタを実際に適用した例です。元の状態と比較できるように、動画の上半分については、フィルタを適用する前の映像を表示させています。</p>
+<div class="youtube">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+カラーグレーディング
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="youtube-frame" style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;"><iframe width="100%" height="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/_Ws_RyiwuUA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
+</div>
+</div>
+</div>
+<p>元の映像も必ずしも不自然な色調の映像というわけではないのですが、一連のフィルタを適用した後の映像と比べるとくすんだような印象なので、一連のフィルタを適用したことによって、当初の狙い通りに鮮やかな印象の表現にできたことがわかります。</p>
 
 
 </section>
