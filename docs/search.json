@@ -310,14 +310,14 @@
     ]
   },
   {
-    "objectID": "subtitles.html",
-    "href": "subtitles.html",
-    "title": "Appendix A — 字幕ファイル",
+    "objectID": "captions.html",
+    "href": "captions.html",
+    "title": "Appendix A — 字幕をつける（SubtitleEdit）",
     "section": "",
     "text": "🚧準備中🚧",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>字幕ファイル</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>字幕をつける（SubtitleEdit）</span>"
     ]
   }
 ]
