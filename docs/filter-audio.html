@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
+<meta name="generator" content="quarto-1.4.557">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -183,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./captions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">字幕をつける（SubtitleEdit）</span></span></a>
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Subtitle Editで字幕をつける</span></span></a>
   </div>
 </li>
       </ul>
@@ -301,7 +301,7 @@ Note
 <h3 data-number="5.1.3" class="anchored" data-anchor-id="リミッター"><span class="header-section-number">5.1.3</span> リミッター</h3>
 <p>先ほどの例では、「ゲイン・音量」を適用した結果、音声ピークメーターで確認するとピークが上端近くに振り切れてしまっているような箇所がありました。</p>
 <p>「ゲイン・音量」は、元から大きな音も、小さな音も、それぞれ一律に設定したレベル分だけ小さくしたり、大きくしたりするため、元から大きな音では大きくなりすぎてしまったり、逆に元から小さな音では小さくなりすぎてしまったりする場合があります。</p>
-<p>そこで、大きすぎる音の音量を抑制するには、「リミッター」というフィルタを使うことができます。Shotcutのリミッターでは「入力ゲイン」「リミット」「リリース」の3つの値を設定できますが、基本的には「リミット」として抑制したい音量レベルのしきい値を設定し、しきい値よりも大きな音について音量を抑制するような使い方をします。</p>
+<p>そこで、大きすぎる音の音量を抑制するには、「リミッター」というフィルタを使うことができます。Shotcutのリミッターでは「入力ゲイン」「リミット」「リリース」の3つの値を設定できますが、基本的には「リミット」として音量レベルの上限値を設定し、上限値を超えるような大きな音について音量を抑制するといった使い方をします。</p>
 <p>次の動画は、先ほどの例について、「リミット」を<code>-3.0dB</code>として「リミッター」を適用した例です。</p>
 <div class="youtube">
 <div class="callout callout-style-default callout-note callout-titled">
