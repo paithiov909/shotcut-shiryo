@@ -35,6 +35,7 @@ format:
     css: [style.css]
     mainfont: |
       -apple-system, "BlinkMacSystemFont", "Helvetica Neue", Helvetica, "Arial", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+    link-external-newwindow: true
     tbl-cap-location: bottom
   docx:
     toc: false
