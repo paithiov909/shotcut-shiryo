@@ -4,7 +4,7 @@
 
 Shotcutを起動すると、次のような画面になります。
 
-![Shotcutの起動時の画面](assets/shotcut-screenshot.png)
+![Shotcutの起動時の画面](assets/shotcut-screenshot.jpg)
 
 この画面の構成は、編集レイアウトと呼ばれるものです。Shotcutにはいくつかの画面の構成（レイアウト）があり、やりたい操作をおこなううえで便利なレイアウトに切り替えながら利用することができます。
 
@@ -193,7 +193,7 @@ Shotcutには、操作しているクリップを一時的に保存しておけ�
 
 プロジェクトを動画ファイルとして書き出すには、まず、画面の上部に表示されている「[]{.shotcut-icon .media-record}（書き出し）」というアイコンをクリックします。すると、画面の左上に「書き出し」というパネルが開くので、適当な「プリセット」を選択し、「ファイルの書き出し」ボタンをクリックします。
 
-![「書き出し」パネル](assets/shotcut-screenshot-record.png)
+![「書き出し」パネル](assets/shotcut-screenshot-record.jpg)
 
 :::{.callout-tip}
 利用しているパソコンの性能にもよりますが、動画ファイルの書き出しには相応の時間がかかります。
