@@ -58,6 +58,8 @@
 - [YouTuberのための素材屋さん](https://ytsozaiyasan.com/)
 - [Download 48 FREE Custom LUTs for Log Footage](https://www.shutterstock.com/blog/free-luts-for-log-footage)
 
+また、このほかに「[Appendix A — Subtitle Editで字幕をつける](captions.html)」の例のなかでは、「[あみたろの声素材工房](https://amitaro.net/)」で頒布されている音声を使用しています。
+
 動画ファイルや音声ファイルをダウンロードできるWebサイトは、ここにあげたもののほかにもたくさんあります。適宜検索したうえで、それぞれのライセンスや利用規約にしたがって使用してください。
 
 ---
