@@ -234,9 +234,6 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<blockquote class="blockquote">
-<p>🚧準備中🚧</p>
-</blockquote>
 <section id="subtitle-editで文字入れする理由" class="level2" data-number="A.1">
 <h2 data-number="A.1" class="anchored" data-anchor-id="subtitle-editで文字入れする理由"><span class="header-section-number">A.1</span> Subtitle Editで文字入れする理由</h2>
 <section id="さまざまな字幕とその役割" class="level3" data-number="A.1.1">
@@ -427,12 +424,25 @@ Tip
 </section>
 <section id="字幕を動画の一部として焼き込む" class="level3" data-number="A.2.3">
 <h3 data-number="A.2.3" class="anchored" data-anchor-id="字幕を動画の一部として焼き込む"><span class="header-section-number">A.2.3</span> 字幕を動画の一部として焼き込む</h3>
-<ul>
-<li>字幕を焼き込む（Generate video with burned-in subtitle）</li>
-</ul>
+<p>すでに説明したように、Subtitle Editで作成できる字幕は、あくまで動画の再生時に、対応する動画プレイヤーによって重ねて表示されるというものです。そのため、使っている動画プレイヤーによらずに字幕が表示されるようにするには、作成した字幕ファイルをもとに、字幕を映像の一部としてあらためて焼き込む作業が必要になります。</p>
+<p>Subtitle Editで字幕を映像に焼き込むには、メニューバーから「ビデオ &gt; Generate video with burned-in subtitle」を選択します。すると、字幕を焼き込むための詳細設定画面が出るので、「解像度」などを適当に設定したうえで「Generate」ボタンを押して、動画を書き出します。</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Subtitle Editをインストール後、はじめてこの操作をするときには、動画を書き出すためのffmpegをダウンロードするよう求めるウィンドウが開きます。このウィンドウのボタンを押すと、Subtitle Editによって自動的にffmpegがダウンロードされます。</p>
+</div>
+</div>
+<p>この下の動画は、ここまでの例のなかで作成した字幕を実際に焼き込んだものです。</p>
 <div class="youtube">
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -441,13 +451,14 @@ Tip
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse show">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="youtube-frame" style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;"><iframe width="100%" height="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/kh8h2SK8TY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </div>
 </div>
 </div>
 </div>
+<p>YouTubeの場合、SRTやWebVTTなどの一部の形式であれば、字幕ファイルそのものを動画ファイルと一緒にアップロードすることで、自動字幕として生成される字幕を代替することができます（YouTubeが対応している字幕ファイルの形式については、「<a href="https://support.google.com/youtube/answer/2734698?sjid=2622966795806053979-AP">サポートされる字幕ファイル - YouTube ヘルプ</a>」を参照してください）。一方で、ASS形式を使っていたり、字幕に装飾を使いたい場合には、この例のように字幕を映像の一部としてあらかじめ焼き込んでおく必要があります。</p>
 
 
 </section>
