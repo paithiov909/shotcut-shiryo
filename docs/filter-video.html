@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.54">
+<meta name="generator" content="quarto-1.5.55">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -203,6 +203,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#切り抜き" id="toc-切り抜き" class="nav-link" data-scroll-target="#切り抜き"><span class="header-section-number">4.3</span> 切り抜き</a></li>
   <li><a href="#合成モード" id="toc-合成モード" class="nav-link" data-scroll-target="#合成モード"><span class="header-section-number">4.4</span> 合成モード</a></li>
   <li><a href="#クロマキー" id="toc-クロマキー" class="nav-link" data-scroll-target="#クロマキー"><span class="header-section-number">4.5</span> クロマキー</a></li>
+  <li><a href="#マスク" id="toc-マスク" class="nav-link" data-scroll-target="#マスク"><span class="header-section-number">4.6</span> マスク</a></li>
   </ul>
 </nav>
     </div>
@@ -556,6 +557,41 @@ Note
 </div>
 </div>
 <p>この例では、先ほどの「やじるしシンプル」という素材に「クロマキー：シンプル」を適用しています。また、「サイズ・位置・回転」を使って矢印の位置や向きを調整しているほか、クリップにフェードアウトをかけています。</p>
+</section>
+<section id="マスク" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="マスク"><span class="header-section-number">4.6</span> マスク</h2>
+<p>Shotcutの「マスク：シンプルな図形」は、このフィルタを適用したクリップの下に（そのクリップ自身が前面になるような）マスクを作成するフィルタです。</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>同様にマスクを作成できるフィルタとして「マスク：ファイルから」などがあります。ここでは「マスク：シンプルな図形」のみを紹介しますが、他のフィルタで作成したマスクについても、ここで紹介しているのとほぼ同じように扱うことができます。</p>
+</div>
+</div>
+<p>マスクというのは、主に黒色で塗られた「覆い」のことで、適用したクリップのうちでも、「覆い」と重なる領域（マスク領域）だけを選択しながら、そのクリップの表示のされ方を調整できるようにするものです。</p>
+<p>こうしたマスクはいくつかの使い方ができますが、よくある使い方として、まず、クリップをマスクの形に切り抜きながら表示させるのに使うことができます。</p>
+<p>この使い方は「切り抜き」によく似ていますが、「マスク：シンプルな図形」では、マスク領域だけを表示しない（マスク領域だけ減算してクリップを重ねる）といったことができるので、たとえば、四角形のマスク領域を設定したうえで、次のような表現をすることができます。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/shotcut-mask-1.jpg" class="img-fluid figure-img"></p>
+<figcaption>マスク：シンプルな図形（減算）</figcaption>
+</figure>
+</div>
+<p>また、その他の使い方として、「マスク：シンプルな図形」以外のフィルタと組み合わせることで、任意のフィルタがかかる範囲をマスク領域によって制限するという使い方もできます。</p>
+<p>この使い方をするには、かかる範囲を制限したいフィルタを「マスク：シンプルな図形」よりも後に追加したうえで、その直後に「マスク：適用」というフィルタを追加します。すると、「マスク：シンプルな図形」と「マスク：適用」とのあいだに挟まれているフィルタのかかる範囲が、設定したマスク領域によって制限されます。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/shotcut-mask-2.jpg" class="img-fluid figure-img"></p>
+<figcaption>マスク：シンプルな図形（減算）を発光と組み合わせた例</figcaption>
+</figure>
+</div>
+<p>たとえば、この上の例は、前面となる画像クリップに、「発光」というフィルタを「マスク：シンプルな図形」と「マスク：適用」とのあいだに挟んでかけたものです。これの一つ前の例と同様に、マスク領域が減算されるようなマスクを設定してあるため、四角形のマスクと重なる部分については「発光」の効果がかかっていないことがわかります。</p>
 
 
 </section>
