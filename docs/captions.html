@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.55">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -246,6 +246,19 @@ ul.task-list li input[type="checkbox"] {
 <p>Shotcutだけでこういった文字入れをおこないたい場合、この資料で紹介した「テキスト：シンプル」や「テキスト：リッチテキスト」といったフィルタを利用することができます。また、Shotcutのフィルタとして文字入れせずに、個々の「テロップ」を画像などとして用意して、それらをクリップとして配置していけば、もっとさまざまな工夫を凝らしたデザインの文字を入れることができるでしょう。</p>
 <p>しかし、いずれにせよ、Shotcutで発話にあわせた内容の文字入れをしようとすると、原則として、表示させる内容の数だけクリップを用意することにならざるをえません。表示させる内容が少なければそれでも構わないのですが、動画を通じて文字入れしなければならない箇所が増えてくると、こうした方法はいくつかの点で不便なものになりがちです。</p>
 <p>まず、表示させる内容をそれぞれ異なるクリップとして扱おうとするのでは、はじめにそれらのクリップを用意するのにかなり時間がかかります。また、そうしたやり方では、それぞれの文字を適当なタイミングに割り付ける作業が大変ですし、後から内容やデザインを調整したいというときにも手間がかかってしまいます。</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="#shotcut-subtitles">この下で紹介している</a>ように、Shotcutのv24.08.29から、Subtitlesという「字幕」をまとめて扱える機能が追加され、まとまった量の文字入れもいくらか楽におこなえるようになりました。そちらの情報も確認してください。</p>
+</div>
+</div>
 </section>
 <section id="字幕ファイルとsubtitle-edit" class="level3" data-number="A.1.3">
 <h3 data-number="A.1.3" class="anchored" data-anchor-id="字幕ファイルとsubtitle-edit"><span class="header-section-number">A.1.3</span> 字幕ファイルとSubtitle Edit</h3>
@@ -273,7 +286,8 @@ ul.task-list li input[type="checkbox"] {
 実際 黄熱病のおかげだった</code></pre>
 <p>字幕ファイルにはWebVTTのほかにも、SRTやASSといったいくつかの形式がありますが、いずれも基本的には、この例のように、ある動画ファイルの「字幕」として表示させたいテキストと、それらのテキストを表示させるタイミングとがまとめて記述されているものになります。</p>
 <p>こうした字幕ファイルは、YouTubeの自動字幕などのように、動画の再生時に動画プレイヤーで重ねて表示させたりするほか、編集ソフトなどによってあらためて動画に書き出すことで映像の一部として埋め込んだりします。後者の方法は、字幕を動画に「焼き込む」とか「焼き付ける」などといわれる作業で、動画を再生する動画プレイヤーによらず「字幕」を表示させられる点で便利ですが、動画ファイルをあらためて書き出すことになるため、書き出しに時間がかかる点に注意が必要です。</p>
-<div class="callout callout-style-default callout-note callout-titled">
+<p>このページでは、<a href="https://github.com/SubtitleEdit/subtitleedit">Subtitle Edit</a>という字幕ファイル編集ソフトを取り上げ、動画に「字幕」をつける方法を紹介します。Subtitle Editは、その名前の通り、本来は翻訳を提供するような「字幕（subtitles）」をつける用途に特化したソフトウェアです。しかし、ここでは単に発話内容を文字起こしした程度の「字幕（captions）」をつけることを念頭に、動画ファイル用の字幕ファイルを作成したうえで、それを映像の一部として焼き込むやり方を説明します。</p>
+<div id="shotcut-subtitles" class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -284,10 +298,11 @@ Note
 </div>
 <div class="callout-body-container callout-body">
 <p>たとえばDaVinci Resolveなど、動画編集ソフトのなかには、一部の形式の字幕ファイルを直接扱うことができるものがあります。</p>
-<p>一方で、Shotcut（v24.06.26）では、今のところ、字幕ファイルを扱う機能は実装されていません。ただし、SRTファイルをインポートできるようにする機能が開発されているようなので、将来的には、Shotcutでもいちおう字幕ファイルを扱えるようになる可能性があります。</p>
+<p>Shotcut（<a href="https://github.com/mltframework/shotcut/releases/tag/v24.08.29">v24.08.29</a>以降）でも、SRT、WebVTT、ASSとSSAという形式の字幕ファイルをSubtitlesとしてインポートできる（ただし、いずれの形式についても、字幕のスタイルは読み込まれません）ほか、SubtitlesをSRTファイルとしてエクスポートすることができます。</p>
+<p>ShotcutのSubtitles機能は、タイムラインに「字幕」のみを配置可能なトラックを追加する機能です。追加した「字幕」は、「Subtitle Burn In」というフィルタをタイムライン全体（タイムライン左上の「出力」と書かれているところ）にかけることで、すべての「字幕」に同様のスタイルを適用しながら、まとめて動画に表示させることができます。</p>
+<p>一方で、この機能は、字幕ファイルを扱ううえではおそらくSubtitle Editほど便利ではないため、用途によって適切なソフトウェアを選択して利用することをおすすめします。</p>
 </div>
 </div>
-<p>このページでは、<a href="https://www.nikse.dk/subtitleedit">Subtitle Edit</a>という字幕ファイル編集ソフトを取り上げ、動画に「字幕」をつける方法を紹介します。Subtitle Editは、その名前の通り、本来は翻訳を提供するような「字幕（subtitles）」をつける用途に特化したソフトウェアです。しかし、ここでは単に発話内容を文字起こしした程度の「字幕（captions）」をつけることを念頭に、動画ファイル用の字幕ファイルを作成したうえで、それを映像の一部として焼き込むやり方を説明します。</p>
 </section>
 </section>
 <section id="subtitle-editの使い方" class="level2" data-number="A.2">
@@ -329,7 +344,7 @@ Note
 <p>実際に、字幕を追加している操作のようすを確認してみましょう。</p>
 <div class="youtube">
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -338,7 +353,7 @@ Note
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="youtube-frame" style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;"><iframe width="100%" height="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/Q6InJCJn1Cw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </div>
@@ -357,7 +372,7 @@ Note
 <p>そうしたケースでは、テキストファイルから字幕の内容をインポートする機能を利用すると便利かもしれません。Subtitle Editでは、一つ一つの字幕の内容が行ごとに入力されてあるテキストファイルを読み込んで、字幕をまとめて追加することができます。</p>
 <div class="youtube">
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -366,7 +381,7 @@ Note
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="youtube-frame" style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;"><iframe width="100%" height="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/0qInB1wH1vU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </div>
@@ -442,7 +457,7 @@ Note
 <p>この下の動画は、ここまでの例のなかで作成した字幕を実際に焼き込んだものです。</p>
 <div class="youtube">
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -451,7 +466,7 @@ Note
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse show">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="youtube-frame" style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;"><iframe width="100%" height="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/kh8h2SK8TY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </div>
