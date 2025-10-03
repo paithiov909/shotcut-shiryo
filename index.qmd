@@ -1,5 +1,36 @@
 # はじめに {.unnumbered}
 
-この資料は、[Shotcut](https://www.shotcut.org/)を使った基本的な動画編集のやり方を紹介するものです。
+この資料は、Shotcutを使った基本的な動画編集のやり方を紹介するものです。
 
 > [Video editing icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/video-editing)
+
+## Shotcutについて
+
+Shotcutは、クロスプラットフォームで動作する、オープンソースな動画編集ソフトウェアです。Dan Dennedyというエンジニアが中心となって、[GitHub](https://github.com/mltframework/shotcut)で開発されています。ライセンスはGPL v3が適用されています。
+
+[Shotcutの公式サイト](https://www.shotcut.org/)では、次のように紹介されています。
+
+> Shotcut was originally conceived in November, 2004 by Charlie Yates, an MLT co-founder and the original lead developer (see the original website). The current version of Shotcut is a complete rewrite by Dan Dennedy, another MLT co-founder and its current lead. Dan wanted to create a new editor based on MLT and he chose to reuse the Shotcut name since he liked it so much. He wanted to make something to exercise the new cross-platform capabilities of MLT especially in conjunction with the WebVfx and Movit plugins.
+
+ここに書かれている「MLT」というのは、現在のShotcutの基盤となっているマルチメディア編集機能を提供するフレームワークのことです。動画編集ソフトとしてのShotcutは、大雑把には、このMLTフレームワークにQtなどを使ったGUIを付けたもので、クロスプラットフォームで比較的軽快に動作するという特徴があります。また、昔のLinux向けのShotcutでは、当時のQtに実装されていたAPIを利用することで、現在のOBSにおける「ブラウザソース」のように、Webブラウザで表示できるような静的HTMLページを直接動画素材として取り込むことができるという特徴をそなえていました（この機能はQt側のアップデートにともない、現行のShotcutではすでに廃止されています）。くわえて、一応オープンソースで開発されていることから、相応の知識があれば、ソースコードを読んで処理の内容を確認することができます。
+
+一方で、機能面では、Adobe Premiere ProやDaVinci Resolveといった一般によく使われている動画編集ソフトにはやはり劣ります。また、Shotcutはすべての機能を無料で利用することができるものの、比較的マイナーなソフトウェアであることから、とくに使い方を日本語で調べようすると、ほしい情報にたどり着くのがやや大変です。
+
+総合すると、どんなパソコンでも無料で使えて扱いやすい動画編集ソフトではありますが、Shotcutを使ってできることを調べるのには手間がかかりがちであり、扱いに慣れるまでにはそれなりの覚悟が求められます。
+
+## Shotcutのインストール・更新の方法
+
+Shotcutの最新のインストーラは、次のいずれかからダウンロードできます。
+
+- [Shotcut - Download](https://www.shotcut.org/download/)
+- [latest release on GitHub](https://github.com/mltframework/shotcut/releases/latest)
+
+Shotcutは、2025年10月現在でも比較的活発に開発が進められており、おおむね1～2か月に一度のペースで、バグフィックスなどを含む新しいリリースが公開されています。一方で、Shotcut自体には自動更新などの機能はないため、最新のShotcutを利用したい場合、基本的には更新を自分で確認しにいって、その都度最新のインストーラを手動でダウンロード・実行する必要があります。
+
+Windowsを使っていて、PowerShellなどの操作に抵抗がないなら、次のようにして[winget](https://learn.microsoft.com/ja-jp/windows/package-manager/winget/)でインストールすることもできます。
+
+```sh
+winget install --exact --id Meltytech.Shotcut
+```
+
+そのほかに、[Homebrew](https://formulae.brew.sh/cask/shotcut#default)や、各種のLinuxのパッケージマネージャーからでも、有志がShotcutをインストールできるようにしているようです。インストール可能なバージョンを確認のうえ、利用してみてもいいかもしれません。

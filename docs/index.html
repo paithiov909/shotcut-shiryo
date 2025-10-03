@@ -22,6 +22,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -202,7 +237,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#はじめに" id="toc-はじめに" class="nav-link active" data-scroll-target="#はじめに">はじめに</a></li>
+  <li><a href="#はじめに" id="toc-はじめに" class="nav-link active" data-scroll-target="#はじめに">はじめに</a>
+  <ul class="collapse">
+  <li><a href="#shotcutについて" id="toc-shotcutについて" class="nav-link" data-scroll-target="#shotcutについて">Shotcutについて</a></li>
+  <li><a href="#shotcutのインストール更新の方法" id="toc-shotcutのインストール更新の方法" class="nav-link" data-scroll-target="#shotcutのインストール更新の方法">Shotcutのインストール・更新の方法</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -241,12 +280,35 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="はじめに" class="level1 unnumbered">
 <h1 class="unnumbered">はじめに</h1>
-<p>この資料は、<a href="https://www.shotcut.org/">Shotcut</a>を使った基本的な動画編集のやり方を紹介するものです。</p>
+<p>この資料は、Shotcutを使った基本的な動画編集のやり方を紹介するものです。</p>
 <blockquote class="blockquote">
 <p><a href="https://www.flaticon.com/free-icons/video-editing">Video editing icons created by Freepik - Flaticon</a></p>
 </blockquote>
+<section id="shotcutについて" class="level2">
+<h2 class="anchored" data-anchor-id="shotcutについて">Shotcutについて</h2>
+<p>Shotcutは、クロスプラットフォームで動作する、オープンソースな動画編集ソフトウェアです。Dan Dennedyというエンジニアが中心となって、<a href="https://github.com/mltframework/shotcut">GitHub</a>で開発されています。ライセンスはGPL v3が適用されています。</p>
+<p><a href="https://www.shotcut.org/">Shotcutの公式サイト</a>では、次のように紹介されています。</p>
+<blockquote class="blockquote">
+<p>Shotcut was originally conceived in November, 2004 by Charlie Yates, an MLT co-founder and the original lead developer (see the original website). The current version of Shotcut is a complete rewrite by Dan Dennedy, another MLT co-founder and its current lead. Dan wanted to create a new editor based on MLT and he chose to reuse the Shotcut name since he liked it so much. He wanted to make something to exercise the new cross-platform capabilities of MLT especially in conjunction with the WebVfx and Movit plugins.</p>
+</blockquote>
+<p>ここに書かれている「MLT」というのは、現在のShotcutの基盤となっているマルチメディア編集機能を提供するフレームワークのことです。動画編集ソフトとしてのShotcutは、大雑把には、このMLTフレームワークにQtなどを使ったGUIを付けたもので、クロスプラットフォームで比較的軽快に動作するという特徴があります。また、昔のLinux向けのShotcutでは、当時のQtに実装されていたAPIを利用することで、現在のOBSにおける「ブラウザソース」のように、Webブラウザで表示できるような静的HTMLページを直接動画素材として取り込むことができるという特徴をそなえていました（この機能はQt側のアップデートにともない、現行のShotcutではすでに廃止されています）。くわえて、一応オープンソースで開発されていることから、相応の知識があれば、ソースコードを読んで処理の内容を確認することができます。</p>
+<p>一方で、機能面では、Adobe Premiere ProやDaVinci Resolveといった一般によく使われている動画編集ソフトにはやはり劣ります。また、Shotcutはすべての機能を無料で利用することができるものの、比較的マイナーなソフトウェアであることから、とくに使い方を日本語で調べようすると、ほしい情報にたどり着くのがやや大変です。</p>
+<p>総合すると、どんなパソコンでも無料で使えて扱いやすい動画編集ソフトではありますが、Shotcutを使ってできることを調べるのには手間がかかりがちであり、扱いに慣れるまでにはそれなりの覚悟が求められます。</p>
+</section>
+<section id="shotcutのインストール更新の方法" class="level2">
+<h2 class="anchored" data-anchor-id="shotcutのインストール更新の方法">Shotcutのインストール・更新の方法</h2>
+<p>Shotcutの最新のインストーラは、次のいずれかからダウンロードできます。</p>
+<ul>
+<li><a href="https://www.shotcut.org/download/">Shotcut - Download</a></li>
+<li><a href="https://github.com/mltframework/shotcut/releases/latest">latest release on GitHub</a></li>
+</ul>
+<p>Shotcutは、2025年10月現在でも比較的活発に開発が進められており、おおむね1～2か月に一度のペースで、バグフィックスなどを含む新しいリリースが公開されています。一方で、Shotcut自体には自動更新などの機能はないため、最新のShotcutを利用したい場合、基本的には更新を自分で確認しにいって、その都度最新のインストーラを手動でダウンロード・実行する必要があります。</p>
+<p>Windowsを使っていて、PowerShellなどの操作に抵抗がないなら、次のようにして<a href="https://learn.microsoft.com/ja-jp/windows/package-manager/winget/">winget</a>でインストールすることもできます。</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">winget</span> install <span class="at">--exact</span> <span class="at">--id</span> Meltytech.Shotcut</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>そのほかに、<a href="https://formulae.brew.sh/cask/shotcut#default">Homebrew</a>や、各種のLinuxのパッケージマネージャーからでも、有志がShotcutをインストールできるようにしているようです。インストール可能なバージョンを確認のうえ、利用してみてもいいかもしれません。</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
