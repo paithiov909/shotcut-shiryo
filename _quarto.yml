@@ -28,6 +28,7 @@ book:
     - color-grading.qmd
   appendices:
     - captions.qmd
+    - outputs.qmd
 
 format:
   html:

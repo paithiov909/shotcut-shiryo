@@ -371,5 +371,49 @@
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Subtitle Editで字幕をつける</span>"
     ]
+  },
+  {
+    "objectID": "outputs.html",
+    "href": "outputs.html",
+    "title": "Appendix B — さまざまな動画の書き出し",
+    "section": "",
+    "text": "B.1 プリセットにない映像モードを追加する\nShotcutのデフォルトの映像モードのプリセットは、それほど充実してはいません。\nShotcutで既存のプリセットに存在しない解像度やfpsの組み合わせで動画をつくるには、「設定 &gt; 映像モード &gt; カスタム &gt; 追加…」から、カスタム映像モードを追加します。カスタム映像モードは、作成時に「名前」を指定した場合にかぎり、Shotcutのデータディレクトリに保存されます。\n「カスタム映像モードを追加」からは、次の項目を指定することができます。",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>さまざまな動画の書き出し</span>"
+    ]
+  },
+  {
+    "objectID": "outputs.html#プリセットにない映像モードを追加する",
+    "href": "outputs.html#プリセットにない映像モードを追加する",
+    "title": "Appendix B — さまざまな動画の書き出し",
+    "section": "",
+    "text": "解像度（プルダウンからはHD～5Kまで選べる。手入力も可能）\nアスペクト比（プルダウンからは16:9, 4:3, 9:16, 1:1, 1.90:1が選べる）\nフレーム/秒（fps）\n走査方法（インターレースかプログレッシブのいずれか。ふつうはプログレッシブでよい）\n色空間（BT.709, BT.601, BT.2020のいずれか。ふつうはBT.709でよい）\n\n\nB.1.1 解像度の早見表\n次のページをもとに、一部の使いそうなものだけを表にまとめています。\n\nモニタ解像度 図解チャート 一覧\n4:3、16:9などのサイズ一覧 - phantom4\n\n\nB.1.1.1 アスペクト比 4:3\n\n\n\n\nw\nh\n\n\n\n\nQVGA\n320\n240\n\n\nVGA\n640\n480\n\n\nNTSC\n720\n483\n\n\nPAL\n768\n576\n\n\nSVGA\n800\n600\n\n\n-\n960\n720\n\n\nXGA\n1024\n768\n\n\nXGA+\n1152\n864\n\n\nQuad-VGA\n1280\n960\n\n\nSXGA+\n1400\n1050\n\n\nハイビジョン\n1440\n1080\n\n\nUXGA\n1600\n1200\n\n\nQXGA\n2048\n1536\n\n\n4M\n2304\n1728\n\n\nQUXGA\n3200\n2400\n\n\n\n\n\nB.1.1.2 アスペクト比 16:9\n\n\n\n\nw\nh\n\n\n\n\nHVGAW\n640\n360\n\n\nFWVGA\n854\n480\n\n\nQHD, QFH\n960\n540\n\n\nWSVGA\n1024\n576\n\n\n720p\n1280\n720\n\n\nFHD（1080i, 1080p）\n1920\n1080\n\n\nQWXGA\n2048\n1152\n\n\nWQHD\n2560\n1440\n\n\nWQHD+\n3200\n1800\n\n\n4K（2160i, 2160p）\n3840\n2160\n\n\n\n\n\n\nB.1.2 fpsの早見表\n\n\n\nfps\nnumerator\ndenominator\n\n\n\n\n23.98\n24000\n1001\n\n\n24\n24\n1\n\n\n25\n25\n1\n\n\n29.97\n30000\n1001\n\n\n30\n30\n1\n\n\n50\n50\n1\n\n\n59.94\n60000\n1001\n\n\n60\n60\n1",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>さまざまな動画の書き出し</span>"
+    ]
+  },
+  {
+    "objectID": "outputs.html#ffmpegのオプションを渡す",
+    "href": "outputs.html#ffmpegのオプションを渡す",
+    "title": "Appendix B — さまざまな動画の書き出し",
+    "section": "B.2 ffmpegのオプションを渡す",
+    "text": "B.2 ffmpegのオプションを渡す\n書き出し時にffmpegに渡されるべきオプションは、「書き出し &gt; 詳細設定 &gt; その他」のタブから指定することができます。ただし、詳細設定からオプションを追加する場合、ffmpeg側に不正なオプションの組み合わせが渡されてしまう可能性があるため、注意が必要です。\nたとえば、「書き出し」中の組み込みプリセット「WebP Animation」から作成できるWebPアニメーションは、デフォルトのままだとループ再生しないものになりますが、「書き出し &gt; 詳細設定 &gt; その他」からloop=0を追加することで、無限ループするようにできます。",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>さまざまな動画の書き出し</span>"
+    ]
+  },
+  {
+    "objectID": "outputs.html#タイムラインの一部だけを書き出す",
+    "href": "outputs.html#タイムラインの一部だけを書き出す",
+    "title": "Appendix B — さまざまな動画の書き出し",
+    "section": "B.3 タイムラインの一部だけを書き出す",
+    "text": "B.3 タイムラインの一部だけを書き出す\nShotcutのマーカーは、Ctrlキーを押しながら端をドラッグすることで「区間」として設定することができます。\n区間として設定されたマーカーは、書き出し時にタイムラインに代わる「出力元」として選択することができるため、マーカーを適当に設定することで、タイムラインの一部だけを動画ファイルとして書き出すことが可能です。",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>さまざまな動画の書き出し</span>"
+    ]
   }
 ]
