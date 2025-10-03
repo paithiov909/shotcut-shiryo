@@ -415,5 +415,16 @@
       "Appendices",
       "<span class='chapter-number'>B</span>  <span class='chapter-title'>さまざまな動画の書き出し</span>"
     ]
+  },
+  {
+    "objectID": "outputs.html#背景が透明な動画をつくる",
+    "href": "outputs.html#背景が透明な動画をつくる",
+    "title": "Appendix B — さまざまな動画の書き出し",
+    "section": "B.4 背景が透明な動画をつくる",
+    "text": "B.4 背景が透明な動画をつくる\n背景が透明だったりといった、アルファチャンネルを含む動画を書き出すには、好きな映像モードでふつうに動画を作成したうえで、「書き出し」中のプリセットのなかから「alpha」として整理されているもののいずれかを選択して書き出しします。アルファチャンネルを含む動画は保存される情報量が多く、Shotcutなどにあらためて持ち込んだときに処理が重くなる原因になりやすい点に注意が必要です。\nなお、「alpha」として整理されているプリセットのなかに色深度が10bitのものはないので、10bitで書き出したい場合などには「書き出し &gt; 詳細設定 &gt; その他」からオプションを調整する必要があります。たとえば、「ten_bit」として整理されている「ProRes 444」プリセットから調整する場合、次のようにできそうです。\nvprofile=4\nvendor=apl0\nmovflags=+write_colr\nmlt_image_format=rgba\npix_fmt=yuva444p10le",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>さまざまな動画の書き出し</span>"
+    ]
   }
 ]

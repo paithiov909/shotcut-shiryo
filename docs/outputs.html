@@ -214,6 +214,7 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#ffmpegのオプションを渡す" id="toc-ffmpegのオプションを渡す" class="nav-link" data-scroll-target="#ffmpegのオプションを渡す"><span class="header-section-number">B.2</span> ffmpegのオプションを渡す</a></li>
   <li><a href="#タイムラインの一部だけを書き出す" id="toc-タイムラインの一部だけを書き出す" class="nav-link" data-scroll-target="#タイムラインの一部だけを書き出す"><span class="header-section-number">B.3</span> タイムラインの一部だけを書き出す</a></li>
+  <li><a href="#背景が透明な動画をつくる" id="toc-背景が透明な動画をつくる" class="nav-link" data-scroll-target="#背景が透明な動画をつくる"><span class="header-section-number">B.4</span> 背景が透明な動画をつくる</a></li>
   </ul>
 </nav>
     </div>
@@ -476,6 +477,16 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="B.3" class="anchored" data-anchor-id="タイムラインの一部だけを書き出す"><span class="header-section-number">B.3</span> タイムラインの一部だけを書き出す</h2>
 <p>Shotcutのマーカーは、Ctrlキーを押しながら端をドラッグすることで「区間」として設定することができます。</p>
 <p>区間として設定されたマーカーは、書き出し時にタイムラインに代わる「出力元」として選択することができるため、マーカーを適当に設定することで、タイムラインの一部だけを動画ファイルとして書き出すことが可能です。</p>
+</section>
+<section id="背景が透明な動画をつくる" class="level2" data-number="B.4">
+<h2 data-number="B.4" class="anchored" data-anchor-id="背景が透明な動画をつくる"><span class="header-section-number">B.4</span> 背景が透明な動画をつくる</h2>
+<p>背景が透明だったりといった、アルファチャンネルを含む動画を書き出すには、好きな映像モードでふつうに動画を作成したうえで、「書き出し」中のプリセットのなかから「alpha」として整理されているもののいずれかを選択して書き出しします。アルファチャンネルを含む動画は保存される情報量が多く、Shotcutなどにあらためて持ち込んだときに処理が重くなる原因になりやすい点に注意が必要です。</p>
+<p>なお、「alpha」として整理されているプリセットのなかに色深度が10bitのものはないので、10bitで書き出したい場合などには「書き出し &gt; 詳細設定 &gt; その他」からオプションを調整する必要があります。たとえば、「ten_bit」として整理されている「ProRes 444」プリセットから調整する場合、次のようにできそうです。</p>
+<pre><code>vprofile=4
+vendor=apl0
+movflags=+write_colr
+mlt_image_format=rgba
+pix_fmt=yuva444p10le</code></pre>
 
 
 </section>
