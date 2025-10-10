@@ -30,6 +30,16 @@
     ]
   },
   {
+    "objectID": "index.html#shotcutの使い方を調べるには",
+    "href": "index.html#shotcutの使い方を調べるには",
+    "title": "Shotcut 資料",
+    "section": "Shotcutの使い方を調べるには",
+    "text": "Shotcutの使い方を調べるには\nよくありがちなトラブルシューティングには、内容はすべて英語になりますが、まずは公式サイト内のShotcut - Frequently Asked Questionsを参照するのがもっとも確実です。やりたいことのイメージはあって、それを実現するための方法がわからないといった場合には、YouTubeなどで解説動画を探してみてもよいかもしれません。\n最新のShotcutに実装されている機能は、公式のForumにあるUser Guideから一覧できます（ただし、これはユーザーガイドとしては未完成です）。このフォーラムには信頼できる情報が集まっているので、Shotcutの使い方で困ったときには、できればここで英語で調べたり質問したりすると、無理に日本語で調べるのと比べて、情報収集が捗ると思います。",
+    "crumbs": [
+      "はじめに"
+    ]
+  },
+  {
     "objectID": "intro.html",
     "href": "intro.html",
     "title": "1  基本操作",

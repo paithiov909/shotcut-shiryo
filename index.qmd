@@ -38,3 +38,9 @@ winget install --exact --id Meltytech.Shotcut
 ```
 
 そのほかに、[Homebrew](https://formulae.brew.sh/cask/shotcut#default)や、各種のLinuxのパッケージマネージャーからでも、有志がShotcutをインストールできるようにしているようです。インストール可能なバージョンを確認のうえ、利用してみてもいいかもしれません。
+
+## Shotcutの使い方を調べるには
+
+よくありがちなトラブルシューティングには、内容はすべて英語になりますが、まずは公式サイト内の[Shotcut - Frequently Asked Questions](https://shotcut.org/FAQ/)を参照するのがもっとも確実です。やりたいことのイメージはあって、それを実現するための方法がわからないといった場合には、YouTubeなどで解説動画を探してみてもよいかもしれません。
+
+最新のShotcutに実装されている機能は、[公式のForum](https://forum.shotcut.org/)にある[User Guide](https://forum.shotcut.org/t/user-guide-table-of-contents/43285)から一覧できます（ただし、これはユーザーガイドとしては未完成です）。このフォーラムには信頼できる情報が集まっているので、Shotcutの使い方で困ったときには、できればここで英語で調べたり質問したりすると、無理に日本語で調べるのと比べて、情報収集が捗ると思います。
